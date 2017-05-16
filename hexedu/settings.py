@@ -25,7 +25,7 @@ SECRET_KEY = 'j=m%8v+x5fi2=3=hlso377yl5^a*kvp66-srqzy517v-a4c&yx'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'core',
 ]
 
 MIDDLEWARE = [
@@ -75,8 +76,12 @@ WSGI_APPLICATION = 'hexedu.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'hexedu',
+        'USER': 'root',
+        'PASSWORD': 'hexedu666',
+        'HOST': '47.92.136.222',
+        'PORT': '3306',
     }
 }
 
