@@ -1,3 +1,9 @@
 from django.shortcuts import render
 
-# Create your views here.
+
+
+def index(req):
+    '''
+    首页
+    '''
+    return render(req, "web/index.html", locals())
