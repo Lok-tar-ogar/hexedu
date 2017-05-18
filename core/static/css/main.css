@@ -557,17 +557,17 @@ ul.sub-menu {
   height: 450px;
 }
 
-#home-slider .slide-text{
+#home-slider .slider-text{
   position: absolute;
   top: 50px;
   left: 0;
   width: 450px;
 }
 
-.animate-in .slide-text {
-  -webkit-animation: fadeInLeftBig 700ms cubic-bezier(0.190,1.000,0.220,1.000) 200ms both;
-  animation: fadeInLeftBig 700ms cubic-bezier(0.190,1.000,0.220,1.000) 200ms both;
-}
+/*.animate-in .slide-text {*/
+  /*-webkit-animation: fadeInLeftBig 700ms cubic-bezier(0.190,1.000,0.220,1.000) 200ms both;*/
+  /*animation: fadeInLeftBig 700ms cubic-bezier(0.190,1.000,0.220,1.000) 200ms both;*/
+/*}*/
 
 #home-slider .slider-hill {
   position: absolute;
@@ -575,10 +575,20 @@ ul.sub-menu {
   bottom: 0;
 }
 
-.animate-in .slider-hill {
-  -webkit-animation: bounceInDown 1000ms ease-in-out 200ms both;
-  animation: bounceInDown 1000ms ease-in-out 200ms both;
+/*.animate-in .slider-hill {*/
+  /*-webkit-animation: bounceInDown 1000ms ease-in-out 200ms both;*/
+  /*animation: bounceInDown 1000ms ease-in-out 200ms both;*/
+/*}*/
+
+#home-slider .slider-house1{
+  position: absolute;
+  right: 110px;
+  bottom: -15px;
 }
+/*.animate-in .slider-house1 {*/
+  /*-webkit-animation: bounceInDown 500ms ease-in-out 800ms both;*/
+  /*animation: bounceInDown 500ms ease-in-out 800ms both;*/
+/*}*/
 
 #home-slider .slider-house {
   position: absolute;
@@ -586,10 +596,10 @@ ul.sub-menu {
   bottom: -30px;
 }
 
-.animate-in .slider-house {
-  -webkit-animation: bounceInDown 500ms ease-in-out 800ms both;
-  animation: bounceInDown 500ms ease-in-out 800ms both;
-}
+/*.animate-in .slider-house {*/
+  /*-webkit-animation: bounceInDown 500ms ease-in-out 800ms both;*/
+  /*animation: bounceInDown 500ms ease-in-out 800ms both;*/
+/*}*/
 
 #home-slider .slider-sun {
   position: absolute;
@@ -597,10 +607,10 @@ ul.sub-menu {
   bottom: 100px;
 }
 
-.animate-in .slider-sun {
-  -webkit-animation: scaleIn 500ms ease-in-out 1200ms both;
-  animation: scaleIn 500ms ease-in-out 1200ms both;
-}
+/*.animate-in .slider-sun {*/
+  /*-webkit-animation: scaleIn 500ms ease-in-out 1200ms both;*/
+  /*animation: scaleIn 500ms ease-in-out 1200ms both;*/
+/*}*/
 
 #home-slider .slider-birds1 {
   position: absolute;
@@ -608,10 +618,10 @@ ul.sub-menu {
   bottom: 75px;
 }
 
-.animate-in .slider-birds1 {
-  -webkit-animation: fadeInLeft 500ms ease-in-out 1200ms both;
-  animation: fadeInLeft 500ms ease-in-out 1200ms both;
-}
+/*.animate-in .slider-birds1 {*/
+  /*-webkit-animation: fadeInLeft 500ms ease-in-out 1200ms both;*/
+  /*animation: fadeInLeft 500ms ease-in-out 1200ms both;*/
+/*}*/
 
 #home-slider .slider-birds2 {
   position: absolute;
@@ -619,10 +629,10 @@ ul.sub-menu {
   bottom: 150px;
 }
 
-.animate-in .slider-birds2 {
-  -webkit-animation: fadeInRight 500ms ease-in-out 1200ms both;
-  animation: fadeInRight 500ms ease-in-out 1200ms both;
-}
+/*.animate-in .slider-birds2 {*/
+  /*-webkit-animation: fadeInRight 500ms ease-in-out 1200ms both;*/
+  /*animation: fadeInRight 500ms ease-in-out 1200ms both;*/
+/*}*/
 
 
 #home-slider h1{
@@ -655,6 +665,109 @@ ul.sub-menu {
   top: 50%;
   margin-top: -24px;
 }
+
+/*************************
+*******Home Page2******
+**************************/
+
+
+#home-slider .slider-house {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+/*.animate-in .slider-house {*/
+  /*-webkit-animation: fadeInDown 700ms ease-in-out 200ms both;*/
+  /*animation: fadeInDown 700ms ease-in-out 200ms both;*/
+/*}*/
+
+#home-slider .slider-circle1 {
+  position: absolute;
+  right: 430px;
+  bottom: 210px;
+}
+
+/*.animate-in .slider-circle1 {*/
+  /*-webkit-animation: bounceIn 500ms ease-in-out 900ms both;*/
+  /*animation: bounceIn 500ms ease-in-out 900ms both;*/
+/*}*/
+
+#home-slider .slider-circle2 {
+  position: absolute;
+  right: 420px;
+  bottom: 245px;
+}
+
+/*.animate-in .slider-circle2 {*/
+  /*-webkit-animation: bounceIn 500ms ease-in-out 1100ms both;*/
+  /*animation: bounceIn 500ms ease-in-out 1100ms both;*/
+/*}*/
+
+#home-slider .slider-cloud1 {
+  position: absolute;
+  right: 290px;
+  bottom: 250px;
+}
+
+/*.animate-in .slider-cloud1 {*/
+  /*-webkit-animation: bounceIn 500ms ease-in-out 1300ms both;*/
+  /*animation: bounceIn 500ms ease-in-out 1300ms both;*/
+/*}*/
+
+#home-slider .slider-cloud2 {
+  position: absolute;
+  right: 375px;
+  bottom: 330px;
+}
+
+/*.animate-in .slider-cloud2 {*/
+  /*-webkit-animation: bounceIn 500ms ease-in-out 1500ms both;*/
+  /*animation: bounceIn 500ms ease-in-out 1500ms both;*/
+/*}*/
+
+#home-slider .slider-cloud3 {
+  position: absolute;
+  right: 75px;
+  bottom: 300px;
+}
+
+/*.animate-in .slider-cloud3 {*/
+  /*-webkit-animation: bounceIn 500ms ease-in-out 1700ms both;*/
+  /*animation: bounceIn 500ms ease-in-out 1700ms both;*/
+/*}*/
+
+#home-slider .slider-sun1 {
+  position: absolute;
+  right: 190px;
+  bottom: 300px;
+}
+
+/*.animate-in .slider-sun1 {*/
+  /*-webkit-animation: bounceIn 800ms ease-in-out 1900ms both;*/
+  /*animation: bounceIn 800ms ease-in-out 1900ms both;*/
+/*}*/
+
+#home-slider .slider-cycle {
+  position: absolute;
+  right: 500px;
+  bottom: 0;
+}
+
+/*.animate-in .slider-cycle {*/
+  /*-webkit-animation: slideInLeft 4000ms cubic-bezier(0.190,1.000,0.220,1.000) 200ms both;*/
+  /*animation: slideInLeft 4000ms cubic-bezier(0.190,1.000,0.220,1.000) 200ms both;*/
+/*}*/
+
+#home-slider h1{
+  margin-top: 70px;
+  margin-bottom: 25px;
+}
+
+#home-slider .btn-common {
+  margin-top: 20px;
+}
+
 
 #action {
   background-image: url(../images/home/tour-bg.png);
@@ -2737,4 +2850,42 @@ span.stButton_gradient,
   -webkit-box-shadow: 0 0 0 5px rgba(0,0,0,.1) inset;
   border-radius: 100%;
   margin: 10px 0;
+}
+
+.gototop {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+}
+.gototop.active {
+  opacity: 1;
+  visibility: visible;
+}
+.gototop a {
+  width: 50px;
+  height: 50px;
+  display: table;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  text-align: center;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  border-radius: 4px;
+}
+.gototop a i {
+  height: 50px;
+  font-size: 28px;
+  display: table-cell;
+  vertical-align: middle;
+}
+.gototop a:hover, .gototop a:active, .gototop a:focus {
+  text-decoration: none;
+  outline: none;
 }

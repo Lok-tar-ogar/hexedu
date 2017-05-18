@@ -5,115 +5,164 @@
 {% endblock %}
 {% block head %}
     <link rel="stylesheet" href="/static/css/swiper.min.css">
+    <style type="text/css">
+        .swiper-button-next { background-image:url("../../static/images/right_arrow.png"); background-size:80%; animation:fadeInLeft ease 2s both infinite; }
+        .swiper-button-prev { background-image:url("../../static/images/left_arrow.png"); background-size:80%; animation:fadeInRight ease 2s both infinite; }
+    </style>
     <script src="/static/js/swiper.jquery.min.js"></script>
+    <script src="/static/js/swiper.animate.min.js"></script>
+		<!-- 载入Swiper动画控制器初始化文件，与swiper.animate.js文件同时使用 -->
+    <script src="/static/js/swiper.animate.param.js"></script>
     <script>
-      $(function () {
-        s = window.innerHeight;
-        alert(s);
-
-      })
+        var myAC_main1 = new animateControl("slider-");
+        $(function () {
+            wheight = window.innerHeight - 172;
+            $("#indexSwiper").height(wheight);
+            $(".main-slider").height(wheight);
+        })
 
     </script>
 {% endblock %}
 {% block content %}
-    <div class="swiper-container" style="height: 100%;">
+    <div class="swiper-container" id="indexSwiper">
         <div class="swiper-wrapper">
             <div class="swiper-slide" >
-
-            </div>
-            <div class="swiper-slide">Slide 2</div>
-            <div class="swiper-slide">Slide 3</div>
-        </div>
-        <!-- 如果需要分页器 -->
-        {#        <div class="swiper-pagination"></div>#}
-        {##}
-        {#        <!-- 如果需要导航按钮 -->#}
-        {#        <div class="swiper-button-prev"></div>#}
-        {#        <div class="swiper-button-next"></div>#}
-        {##}
-        {#        <!-- 如果需要滚动条 -->#}
-        {#        <div class="swiper-scrollbar"></div>#}
-    </div>
-    <script>
-        var mySwiper = new Swiper('.swiper-container', {
-            {#            autoplay: 3000#}
-        })
-    </script>
-    <section id="home-slider">
-        <div class="container">
-            <div class="row">
-                <div class="main-slider">
-                    <div class="slide-text">
-                        <h1>We Are Creative Nerds</h1>
-                        <p>Boudin doner frankfurter pig. Cow shank bresaola pork loin tri-tip tongue venison pork belly meatloaf short loin landjaeger biltong beef ribs shankle chicken andouille.</p>
-                        <a href="#" class="btn btn-common">SIGN UP</a>
-                    </div>
-                    <img src="/static/images/home/slider/hill.png" class="slider-hill" alt="slider image">
-                    <img src="/static/images/home/slider/house.png" class="slider-house" alt="slider image">
-                    <img src="/static/images/home/slider/sun.png" class="slider-sun" alt="slider image">
-                    <img src="/static/images/home/slider/birds1.png" class="slider-birds1" alt="slider image">
-                    <img src="/static/images/home/slider/birds2.png" class="slider-birds2" alt="slider image">
-                </div>
-            </div>
-        </div>
-        <div class="preloader"><i class="fa fa-sun-o fa-spin"></i></div>
-    </section>
-    <!--/#home-slider-->
-
-    <section id="services">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-4 text-center padding wow fadeIn" data-wow-duration="1000ms" data-wow-delay="300ms">
-                    <div class="single-service">
-                        <div class="wow scaleIn" data-wow-duration="500ms" data-wow-delay="300ms">
-                            <img src="/static/images/home/icon1.png" alt="">
-                        </div>
-                        <h2>Incredibly Responsive</h2>
-                        <p>Ground round tenderloin flank shank ribeye. Hamkevin meatball swine. Cow shankle beef sirloin chicken ground round.</p>
-                    </div>
-                </div>
-                <div class="col-sm-4 text-center padding wow fadeIn" data-wow-duration="1000ms" data-wow-delay="600ms">
-                    <div class="single-service">
-                        <div class="wow scaleIn" data-wow-duration="500ms" data-wow-delay="600ms">
-                            <img src="/static/images/home/icon2.png" alt="">
-                        </div>
-                        <h2>Superior Typography</h2>
-                        <p>Hamburger ribeye drumstick turkey, strip steak sausage ground round shank pastrami beef brisket pancetta venison.</p>
-                    </div>
-                </div>
-                <div class="col-sm-4 text-center padding wow fadeIn" data-wow-duration="1000ms" data-wow-delay="900ms">
-                    <div class="single-service">
-                        <div class="wow scaleIn" data-wow-duration="500ms" data-wow-delay="900ms">
-                            <img src="/static/images/home/icon3.png" alt="">
-                        </div>
-                        <h2>Swift Page Builder</h2>
-                        <p>Venison tongue, salami corned beef ball tip meatloaf bacon. Fatback pork belly bresaola tenderloin bone pork kevin shankle.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!--/#services-->
-
-    <section id="action" class="responsive">
-        <div class="vertical-center">
-            <div class="container">
-                <div class="row">
-                    <div class="action take-tour">
-                        <div class="col-sm-7 wow fadeInLeft" data-wow-duration="500ms" data-wow-delay="300ms">
-                            <h1 class="title">Triangle Corporate Template</h1>
-                            <p>A responsive, retina-ready &amp; wide multipurpose template.</p>
-                        </div>
-                        <div class="col-sm-5 text-center wow fadeInRight" data-wow-duration="500ms" data-wow-delay="300ms">
-                            <div class="tour-button">
-                                <a href="#" class="btn btn-common">TAKE THE TOUR</a>
+                <section id="home-slider">
+                    <div class="container">
+                        <div class="row">
+                            <div class="main-slider">
+                                <div class="slider-text">
+                                    <h1>We Are Creative Nerds</h1>
+                                    <p>Boudin doner frankfurter pig. Cow shank bresaola pork loin tri-tip tongue venison pork belly meatloaf short loin landjaeger biltong beef ribs shankle chicken andouille.</p>
+                                    <a href="#" class="btn btn-common">SIGN UP</a>
+                                </div>
+                                <img src="/static/images/home/slider/hill.png" class="slider-hill" alt="slider image">
+                                <img src="/static/images/home/slider/house.png" class="slider-house1" alt="slider image">
+                                <img src="/static/images/home/slider/sun.png" class="slider-sun" alt="slider image">
+                                <img src="/static/images/home/slider/birds1.png" class="slider-birds1" alt="slider image">
+                                <img src="/static/images/home/slider/birds2.png" class="slider-birds2" alt="slider image">
                             </div>
                         </div>
                     </div>
-                </div>
+                </section>
+            </div>
+            <div class="swiper-slide">
+                <section id="home-slider">
+                    <div class="container">
+                        <div class="main-slider">
+                            <div class="slider-text">
+                                <h1>We Are Creative Nerds</h1>
+                                <p>Boudin doner frankfurter pig. Cow shank bresaola pork loin tri-tip tongue venison pork belly meatloaf short loin landjaeger biltong beef ribs shankle chicken andouille.</p>
+                                <a href="#" class="btn btn-common">SIGN UP</a>
+                            </div>
+                            <img src="/static/images/home/slider/slide1/house.png" class="img-responsive slider-house" alt="slider image">
+                            <img src="/static/images/home/slider/slide1/circle1.png" class="slider-circle1" alt="slider image">
+                            <img src="/static/images/home/slider/slide1/circle2.png" class="slider-circle2" alt="slider image">
+                            <img src="/static/images/home/slider/slide1/cloud1.png" class="slider-cloud1" alt="slider image">
+                            <img src="/static/images/home/slider/slide1/cloud2.png" class="slider-cloud2" alt="slider image">
+                            <img src="/static/images/home/slider/slide1/cloud3.png" class="slider-cloud3" alt="slider image">
+                            <img src="/static/images/home/slider/slide1/sun.png" class="slider-sun1" alt="slider image">
+                            <img src="/static/images/home/cycle.png" class="slider-cycle" alt="">
+                        </div>
+                    </div>
+                </section>
             </div>
         </div>
-    </section>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+
+    </div>
+    <script>
+        var mySwiper = new Swiper('.swiper-container', {
+            autoplay: 10000,
+            grabCursor : true,
+            loop: true,
+            prevButton:'.swiper-button-prev ',
+            nextButton:'.swiper-button-next',
+            onInit: function(swiper){
+                myAC_main1.init(swiperAnimateParam_main, swiper);
+                myAC_main1.play(); // 如果页面中未使用Loading效果，则必须取消本行代码的注释，以开启myAC_main1主动画控制器中动画的播放
+				},
+				onSlideChangeEnd: function(swiper){
+					myAC_main1.play();
+            }
+        })
+    </script>
+    {#    <section id="home-slider">#}
+    {#        <div class="container">#}
+    {#            <div class="row">#}
+    {#                <div class="main-slider">#}
+    {#                    <div class="slide-text">#}
+    {#                        <h1>We Are Creative Nerds</h1>#}
+    {#                        <p>Boudin doner frankfurter pig. Cow shank bresaola pork loin tri-tip tongue venison pork belly meatloaf short loin landjaeger biltong beef ribs shankle chicken andouille.</p>#}
+    {#                        <a href="#" class="btn btn-common">SIGN UP</a>#}
+    {#                    </div>#}
+    {#                    <img src="/static/images/home/slider/hill.png" class="slider-hill" alt="slider image">#}
+    {#                    <img src="/static/images/home/slider/house.png" class="slider-house" alt="slider image">#}
+    {#                    <img src="/static/images/home/slider/sun.png" class="slider-sun" alt="slider image">#}
+    {#                    <img src="/static/images/home/slider/birds1.png" class="slider-birds1" alt="slider image">#}
+    {#                    <img src="/static/images/home/slider/birds2.png" class="slider-birds2" alt="slider image">#}
+    {#                </div>#}
+    {#            </div>#}
+    {#        </div>#}
+    {#        <div class="preloader"><i class="fa fa-sun-o fa-spin"></i></div>#}
+    {#    </section>#}
+    <!--/#home-slider-->
+
+{#    <section id="services">#}
+{#        <div class="container">#}
+{#            <div class="row">#}
+{#                <div class="col-sm-4 text-center padding wow fadeIn" data-wow-duration="1000ms" data-wow-delay="300ms">#}
+{#                    <div class="single-service">#}
+{#                        <div class="wow scaleIn" data-wow-duration="500ms" data-wow-delay="300ms">#}
+{#                            <img src="/static/images/home/icon1.png" alt="">#}
+{#                        </div>#}
+{#                        <h2>云计算+大数据</h2>#}
+{#                        <p>海量学校与客户资源匹配，找到最适合你的解决路径</p>#}
+{#                    </div>#}
+{#                </div>#}
+{#                <div class="col-sm-4 text-center padding wow fadeIn" data-wow-duration="1000ms" data-wow-delay="600ms">#}
+{#                    <div class="single-service">#}
+{#                        <div class="wow scaleIn" data-wow-duration="500ms" data-wow-delay="600ms">#}
+{#                            <img src="/static/images/home/icon2.png" alt="">#}
+{#                        </div>#}
+{#                        <h2>用户中心进度查询</h2>#}
+{#                        <p>用户中心进度查询，随时随地了解项目进度，让你的等待变得省时又安心。</p>#}
+{#                    </div>#}
+{#                </div>#}
+{#                <div class="col-sm-4 text-center padding wow fadeIn" data-wow-duration="1000ms" data-wow-delay="900ms">#}
+{#                    <div class="single-service">#}
+{#                        <div class="wow scaleIn" data-wow-duration="500ms" data-wow-delay="900ms">#}
+{#                            <img src="/static/images/home/icon3.png" alt="">#}
+{#                        </div>#}
+{#                        <h2>Swift Page Builder</h2>#}
+{#                        <p>Venison tongue, salami corned beef ball tip meatloaf bacon. Fatback pork belly bresaola tenderloin bone pork kevin shankle.</p>#}
+{#                    </div>#}
+{#                </div>#}
+{#            </div>#}
+{#        </div>#}
+{#    </section>#}
+{#    <!--/#services-->#}
+{##}
+{#    <section id="action" class="responsive">#}
+{#        <div class="vertical-center">#}
+{#            <div class="container">#}
+{#                <div class="row">#}
+{#                    <div class="action take-tour">#}
+{#                        <div class="col-sm-7 wow fadeInLeft" data-wow-duration="500ms" data-wow-delay="300ms">#}
+{#                            <h1 class="title">Triangle Corporate Template</h1>#}
+{#                            <p>A responsive, retina-ready &amp; wide multipurpose template.</p>#}
+{#                        </div>#}
+{#                        <div class="col-sm-5 text-center wow fadeInRight" data-wow-duration="500ms" data-wow-delay="300ms">#}
+{#                            <div class="tour-button">#}
+{#                                <a href="#" class="btn btn-common">TAKE THE TOUR</a>#}
+{#                            </div>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                </div>#}
+{#            </div>#}
+{#        </div>#}
+{#    </section>#}
     <!--/#action-->
 
     <section id="features">
@@ -121,7 +170,7 @@
             <div class="row">
                 <div class="single-features">
                     <div class="col-sm-5 wow fadeInLeft" data-wow-duration="500ms" data-wow-delay="300ms">
-                        <img src="/static/images/home/image1.png" class="img-responsive" alt="">
+                        <img src="/static/images/index/image1.png" class="img-responsive" alt="">
                     </div>
                     <div class="col-sm-6 wow fadeInRight" data-wow-duration="500ms" data-wow-delay="300ms">
                         <h2>Experienced and Enthusiastic</h2>
@@ -134,12 +183,12 @@
                         <P>Mollit eiusmod id chuck turducken laboris meatloaf pork loin tenderloin swine. Pancetta excepteur fugiat strip steak tri-tip. Swine salami eiusmod sint, ex id venison non. Fugiat ea jowl cillum meatloaf.</P>
                     </div>
                     <div class="col-sm-5 wow fadeInRight" data-wow-duration="500ms" data-wow-delay="300ms">
-                        <img src="/static/images/home/image2.png" class="img-responsive" alt="">
+                        <img src="/static/images/index/image2.png" class="img-responsive" alt="">
                     </div>
                 </div>
                 <div class="single-features">
                     <div class="col-sm-5 wow fadeInLeft" data-wow-duration="500ms" data-wow-delay="300ms">
-                        <img src="/static/images/home/image3.png" class="img-responsive" alt="">
+                        <img src="/static/images/index/image3.png" class="img-responsive" alt="">
                     </div>
                     <div class="col-sm-6 wow fadeInRight" data-wow-duration="500ms" data-wow-delay="300ms">
                         <h2>Experienced and Enthusiastic</h2>
@@ -150,6 +199,32 @@
         </div>
     </section>
     <!--/#features-->
+    <section id="action">
+        <div class="vertical-center">
+             <div class="container">
+                <div class="row">
+                    <div class="action count">
+                        <div class="col-sm-3 text-center wow bounceIn" data-wow-duration="1000ms" data-wow-delay="300ms">
+                            <h1 class="timer bold" data-to="2" data-speed="3000" data-from="0"></h1>
+                            <h3>年业内口碑名列前茅</h3>
+                        </div>
+                        <div class="col-sm-3 text-center wow bounceIn" data-wow-duration="1000ms" data-wow-delay="300ms">
+                            <h1 class="timer bold" data-to="100" data-speed="3000" data-from="0"></h1>
+                            <h3>名国内外优质名师汇聚</h3>
+                        </div>
+                        <div class="col-sm-3 text-center wow bounceIn" data-wow-duration="1000ms" data-wow-delay="300ms">
+                            <h1 class="timer bold" data-to="200" data-speed="3000" data-from="0"></h1>
+                            <h3>名国内外优质名师汇聚</h3>
+                        </div>
+                        <div class="col-sm-3 text-center wow bounceIn" data-wow-duration="1000ms" data-wow-delay="300ms">
+                            <h1 class="timer bold" data-to="98" data-speed="3000" data-from="0"></h1>
+                            <h3>%办理成功率</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+   </section>
 
     <section id="clients">
         <div class="container">
