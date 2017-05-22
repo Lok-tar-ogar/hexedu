@@ -14,3 +14,10 @@ def apply(req):
     本研申请
     '''
     return render(req, "web/application.html", locals())
+
+
+def information(req):
+    '''
+    资讯中心
+    '''
+    return render(req, "web/information.html", locals())
