@@ -22,6 +22,6 @@ urlpatterns = [
     url(r'^$', views.index),
     url(r'^apply$', views.apply),
     url(r'^information$', views.information),
-
+    url(r'^information/1$', views.information_detail),
 
 ]

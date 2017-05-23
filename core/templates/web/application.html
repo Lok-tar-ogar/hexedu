@@ -7,36 +7,79 @@
 {% block head %}
     <link href="../../static/css/jqvmap.css" media="screen" rel="stylesheet" type="text/css">
     <script type="text/javascript" src="../../static/js/jquery.vmap.min.js"></script>
-    <script type="text/javascript" src="../../static/js/jquery.vmap.usa.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../static/js/map/jquery.vmap.world.js" charset="utf-8"></script>
+    <script>
+        $(function () {
+            wheight = window.innerHeight - 172;
+            $("#vmap").height(wheight);
+        })
+    </script>
     <script>
         jQuery(document).ready(function () {
             jQuery('#vmap').vectorMap({
-                map: 'usa_en',
-                backgroundColor:'#ffffff',
+                map: 'world_en',
+{#                pins: { "pk" : "pin_for_pk", "ru" : "pin_for_ru"},#}
+{#                pinMode: 'id',#}
+                backgroundColor: '#ffffff',
                 borderColor: '#818181',
                 borderOpacity: 0.25,
                 borderWidth: 1,
-                color:'#999999',
-                selectedColor: '#ffffff',
+                color: '#999999',
                 enableZoom: false,
-                showTooltip: true,
-{#                showLabels:true,#}
-{#                selectedColor: null,#}
-{#                hoverColor: null,#}
                 hoverColor: '#c9dfaf',
+                hoverOpacity: null,
+                normalizeFunction: 'linear',
+                scaleColors: ['#b6d6ff', '#005ace'],
+                selectedColor: '#c9dfaf',
+                selectedRegions: null,
+                showTooltip: true,
                 colors: {
-                    mo: '#C9DFAF',
-                    fl: '#C9DFAF',
-                    or: '#C9DFAF'
+                    us: '#C9DFAF',
+                    ca: '#C9DFAF',
+                    ru: '#C9DFAF'
                 },
-                onRegionClick: function(event, code, region){
-                    event.preventDefault();
-                }
+                onRegionClick: function(element, code, region)
+                {
+                    {#                        event.preventDefault();#}
+                    {#                    var message = 'You clicked "'#}
+                    {#                        + region#}
+                    {#                        + '" which has the code: '#}
+                    {#                        + code.toUpperCase();#}
+                    {##}
+                    alert(code);
+                    {#                    window.location.href='/';#}
+
+                },
+                onLabelShow: function(event, label, code)
+                {
+                    if (code == 'ca')
+                    {
+                        // Hide the label
+                        label.html('<div class="map-tooltip"><h1 class="header">Header</h1><p class="description">Canada</p></div>');
+{#                        event.preventDefault();#}
+                    }
+                    else if (code == 'ru')
+                    {
+                        // Plain TEXT labels
+                        label.text('Bears, vodka, balalaika');
+                    }
+                    else if (code == 'us')
+                    {
+                        // HTML Based Labels. You can use any HTML you want, this is just an example
+                        label.html('<div class="map-tooltip"><h1 class="header">Header</h1><p class="description">Some Description</p></div>');
+                    }
+                },
             });
+
         });
+
     </script>
 {% endblock %}
 
 {% block content %}
-    <div id="vmap" style="width: 80%; height: 500px; margin:0 auto"></div>
+    <div id="vmap" style="width: 80%;  margin:0 auto"></div>
+    <div style="display:none">
+        <img id="pin_for_pk" src="" />
+        <div id="pin_for_ru">!!!!.</div>
+    </div>
 {% endblock %}
