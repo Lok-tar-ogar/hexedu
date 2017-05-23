@@ -21,3 +21,10 @@ def information(req):
     资讯中心
     '''
     return render(req, "web/information.html", locals())
+
+
+def information_detail(req):
+    '''
+    资讯详情
+    '''
+    return render(req, "web/information_detail.html", locals())
