@@ -23,8 +23,25 @@ var goToTop = function() {
     });
 };
 
+
+var accordion = function() {
+    $('.gtco-accordion-heading').on('click', function(event){
+
+        var $this = $(this);
+
+        $this.closest('.gtco-accordion').find('.gtco-accordion-content').slideToggle(400);
+        if ($this.closest('.gtco-accordion').hasClass('active')) {
+            $this.closest('.gtco-accordion').removeClass('active');
+        } else {
+            $this.closest('.gtco-accordion').addClass('active');
+        }
+        event.preventDefault();
+    });
+};
+
 jQuery(function($) {'use strict';
-	goToTop();
+    goToTop();
+    accordion();
     //Responsive Nav
     $('li.dropdown').find('.fa-angle-down').each(function(){
         $(this).on('click', function(){

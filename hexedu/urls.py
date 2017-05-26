@@ -23,5 +23,8 @@ urlpatterns = [
     url(r'^apply$', views.apply),
     url(r'^information$', views.information),
     url(r'^information/1$', views.information_detail),
-
+    url(r'^guidance$', views.guidance),
+    url(r'^tour$', views.tour),
+    url(r'^certification$', views.certification),
+    url(r'^live$', views.live),
 ]
