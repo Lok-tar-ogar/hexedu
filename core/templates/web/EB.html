@@ -1,0 +1,79 @@
+{% extends 'inc/master.html' %}
+
+{% block title %}
+
+{% endblock %}
+
+{% block head %}
+    <script>
+        $(document).ready(function () {
+            $('#eb').prop('class', 'active');
+        });
+    </script>
+{% endblock %}
+
+{% block content %}
+    <section id="home-slider">
+        <div class="container">
+            <div class="row">
+                <div class="main-slider">
+                    <div class="slider-text">
+                        <h1>移民指导</h1>
+                        <p>Boudin doner frankfurter pig. Cow shank bresaola pork loin tri-tip tongue venison pork belly meatloaf short loin landjaeger biltong beef ribs shankle chicken andouille.</p>
+                        <a href="#" class="btn btn-common">SIGN UP</a>
+                    </div>
+                    <img src="/static/images/home/slider/hill.png" class="slider-hill" alt="slider image">
+                    <img src="/static/images/home/slider/house.png" class="slider-house" alt="slider image">
+                    <img src="/static/images/home/slider/sun.png" class="slider-sun" alt="slider image">
+                    <img src="/static/images/home/slider/birds1.png" class="slider-birds1" alt="slider image">
+                    <img src="/static/images/home/slider/birds2.png" class="slider-birds2" alt="slider image">
+                </div>
+            </div>
+        </div>
+        <div class="preloader"><i class="fa fa-sun-o fa-spin"></i></div>
+    </section>
+
+    <section id="wangke" class="choose">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="0ms">
+                    <img src="/static/images/services/4.png" class="img-responsive" alt="">
+                </div>
+                <div class="col-sm-6 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="0ms">
+                    <h2>网课梳理</h2>
+                    <p>Nisi commodo bresaola, leberkas venison eiusmod bacon occaecat labore<br /> tail corned beef Capicola nisi flank sed.</p>
+                    <ul class="elements">
+                        <li class="wow fadeInUp" data-wow-duration="900ms" data-wow-delay="100ms"><i class="fa fa-angle-right"></i> when an unknown printer took a galley of type</li>
+                        <li class="wow fadeInUp" data-wow-duration="800ms" data-wow-delay="200ms"><i class="fa fa-angle-right"></i> scrambled it to make a type specimen book.</li>
+                        <li class="wow fadeInUp" data-wow-duration="700ms" data-wow-delay="300ms"><i class="fa fa-angle-right"></i> scrambled it to make a type specimen book.</li>
+                        <li class="wow fadeInUp" data-wow-duration="600ms" data-wow-delay="400ms"><i class="fa fa-angle-right"></i> scrambled it to make a type specimen book.</li>
+                        <li class="wow fadeInUp" data-wow-duration="500ms" data-wow-delay="500ms"><i class="fa fa-angle-right"></i> but also the leap into electronic typesetting.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="lunwen" class="choose">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-sm-6 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="0ms">
+                    <h2>论文辅导</h2>
+                    <p>Nisi commodo bresaola, leberkas venison eiusmod bacon occaecat labore<br /> tail corned beef Capicola nisi flank sed.</p>
+                    <ul class="elements">
+                        <li class="wow fadeInUp" data-wow-duration="900ms" data-wow-delay="100ms"><i class="fa fa-angle-right"></i> when an unknown printer took a galley of type</li>
+                        <li class="wow fadeInUp" data-wow-duration="800ms" data-wow-delay="200ms"><i class="fa fa-angle-right"></i> scrambled it to make a type specimen book.</li>
+                        <li class="wow fadeInUp" data-wow-duration="700ms" data-wow-delay="300ms"><i class="fa fa-angle-right"></i> scrambled it to make a type specimen book.</li>
+                        <li class="wow fadeInUp" data-wow-duration="600ms" data-wow-delay="400ms"><i class="fa fa-angle-right"></i> scrambled it to make a type specimen book.</li>
+                        <li class="wow fadeInUp" data-wow-duration="500ms" data-wow-delay="500ms"><i class="fa fa-angle-right"></i> but also the leap into electronic typesetting.</li>
+                    </ul>
+                </div>
+                <div class="col-sm-6 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="0ms">
+                    <img src="/static/images/services/4.png" class="img-responsive" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}

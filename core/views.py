@@ -56,3 +56,18 @@ def live(req):
     生活辅助
     '''
     return render(req, "web/live.html", locals())
+
+
+def EB(req):
+    '''
+    移民落户
+    '''
+    return render(req, "web/EB.html", locals())
+
+def EB3(req):
+    '''
+    移民落户EB-3
+    '''
+    return render(req, "web/EB-3.html", locals())
+
+

@@ -27,4 +27,6 @@ urlpatterns = [
     url(r'^tour$', views.tour),
     url(r'^certification$', views.certification),
     url(r'^live$', views.live),
+    url(r'^eb$', views.EB),
+    url(r'^eb3$', views.EB3),
 ]
