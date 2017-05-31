@@ -29,4 +29,8 @@ urlpatterns = [
     url(r'^live$', views.live),
     url(r'^eb$', views.EB),
     url(r'^eb3$', views.EB3),
+    url(r'^usa$', views.usa),
+    url(r'^ca$', views.ca),
+    url(r'^europe$', views.europe),
+    url(r'^asia', views.asia),
 ]

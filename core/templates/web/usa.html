@@ -1,0 +1,62 @@
+{% extends 'inc/master.html' %}
+
+{% block title %}
+
+{% endblock %}
+
+{% block head %}
+     <link href="../../static/css/jqvmap.css" media="screen" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="../../static/js/jquery.vmap.min.js"></script>
+    <script type="text/javascript" src="../../static/js/map/jquery.vmap.usa.js" charset="utf-8"></script>
+    <script>
+        $(function () {
+            $('#apply').prop('class', 'active');
+            wheight = window.innerHeight - 172;
+            $("#vmap").height(wheight);
+
+        })
+    </script>
+    <script>
+        jQuery(document).ready(function () {
+            jQuery('#vmap').vectorMap({
+                map: 'usa_en',
+{#                pins: { "pk" : "pin_for_pk", "ru" : "pin_for_ru"},#}
+{#                pinMode: 'id',#}
+                backgroundColor: '#ffffff',
+                borderColor: '#818181',
+                borderOpacity: 0.25,
+                borderWidth: 1,
+                color: '#999999',
+                enableZoom: false,
+                hoverColor: '#c9dfaf',
+                hoverOpacity: null,
+                normalizeFunction: 'linear',
+                scaleColors: ['#b6d6ff', '#005ace'],
+                selectedColor: '#c9dfaf',
+                selectedRegions: null,
+                showTooltip: true,
+{#                colors: {#}
+{#                    us: '#C9DFAF',#}
+{#                    ca: '#C9DFAF',#}
+{#                    ru: '#C9DFAF'#}
+{#                },#}
+                onRegionClick: function(element, code, region)
+                {
+                    {#                        event.preventDefault();#}
+                    alert(code);
+
+                },
+                onLabelShow: function(event, label, code)
+                {
+
+                },
+            });
+
+        });
+
+    </script>
+{% endblock %}
+
+{% block content %}
+    <div id="vmap" style="width: 80%;  margin:0 auto"></div>
+{% endblock %}

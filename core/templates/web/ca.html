@@ -1,24 +1,24 @@
 {% extends 'inc/master.html' %}
 
 {% block title %}
-    本研申请
+
 {% endblock %}
 
 {% block head %}
-    <link href="../../static/css/jqvmap.css" media="screen" rel="stylesheet" type="text/css">
+     <link href="../../static/css/jqvmap.css" media="screen" rel="stylesheet" type="text/css">
     <script type="text/javascript" src="../../static/js/jquery.vmap.min.js"></script>
-    <script type="text/javascript" src="../../static/js/map/jquery.vmap.world.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../static/js/map/jquery.vmap.canada.js" charset="utf-8"></script>
     <script>
         $(function () {
-            $('#apply').prop('class', 'active');
             wheight = window.innerHeight - 172;
             $("#vmap").height(wheight);
+            $('#apply').prop('class', 'active');
         })
     </script>
     <script>
         jQuery(document).ready(function () {
             jQuery('#vmap').vectorMap({
-                map: 'world_en',
+                map: 'canada_en',
 {#                pins: { "pk" : "pin_for_pk", "ru" : "pin_for_ru"},#}
 {#                pinMode: 'id',#}
                 backgroundColor: '#ffffff',
@@ -79,8 +79,4 @@
 
 {% block content %}
     <div id="vmap" style="width: 80%;  margin:0 auto"></div>
-    <div style="display:none">
-        <img id="pin_for_pk" src="" />
-        <div id="pin_for_ru">!!!!.</div>
-    </div>
 {% endblock %}

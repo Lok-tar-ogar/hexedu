@@ -64,6 +64,7 @@ def EB(req):
     '''
     return render(req, "web/EB.html", locals())
 
+
 def EB3(req):
     '''
     移民落户EB-3
@@ -71,3 +72,29 @@ def EB3(req):
     return render(req, "web/EB-3.html", locals())
 
 
+def usa(req):
+    '''
+    美国
+    '''
+    return render(req, "web/usa.html", locals())
+
+
+def ca(req):
+    '''
+    加拿大
+    '''
+    return render(req, "web/ca.html", locals())
+
+
+def europe(req):
+    '''
+    加拿大
+    '''
+    return render(req, "web/europe.html", locals())
+
+
+def asia(req):
+    '''
+    加拿大
+    '''
+    return render(req, "web/asia.html", locals())
