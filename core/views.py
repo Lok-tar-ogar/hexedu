@@ -98,3 +98,44 @@ def asia(req):
     加拿大
     '''
     return render(req, "web/asia.html", locals())
+
+
+def profession(req):
+    '''
+    职业规划
+    '''
+    return render(req, "web/profession.html", locals())
+
+
+def resume(req):
+    '''
+    简历咨询
+    '''
+    return render(req, "web/resume.html", locals())
+
+
+def personnel(req):
+    '''
+    人才录入
+    '''
+    return render(req, "web/personnel.html", locals())
+
+
+def train(req):
+    return render(req, "web/train.html", locals())
+
+
+def cooperate(req):
+    return render(req, "web/cooperate.html", locals())
+
+
+def elite(req):
+    return render(req, "web/elite.html", locals())
+
+
+def contact(req):
+    return render(req, "web/contact.html", locals())
+
+
+def about(req):
+    return render(req, "web/about.html", locals())

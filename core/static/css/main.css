@@ -806,6 +806,13 @@ ul.sub-menu {
   margin-bottom: 15px;
 }
 
+.single-service p i {
+  color: #C03035;
+  margin-right: 10px;
+  display: inline-block;
+}
+
+
 .single-service p {
   padding: 0 48px;
 }
@@ -3164,6 +3171,19 @@ span.stButton_gradient,
   /*margin-bottom: 10px;*/
 }
 
+.normal-p{
+  font-size: 14px;
+  color: #5d5d5d;
+  font-weight: 300;
+  margin-top: 10px;
+  line-height: 1.8;
+}
+
+.pad{
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+
 .gtco-accordion {
   position: relative;
   background: #fff;
@@ -3173,6 +3193,7 @@ span.stButton_gradient,
   padding: 20px;
   position: relative;
   cursor: pointer;
+  border: 1px solid #e6e6e6;
 }
 .gtco-accordion .gtco-accordion-heading h3 {
   margin: 0;
@@ -3194,8 +3215,9 @@ span.stButton_gradient,
   /*transform: rotate(-45deg);*/
 }
 .gtco-accordion .gtco-accordion-content {
-  border-top: 1px solid #e6e6e6;
+  border: 1px solid #e6e6e6;
   display: none;
+
 }
 .gtco-accordion .gtco-accordion-content .inner {
   padding: 20px;
@@ -3210,4 +3232,13 @@ span.stButton_gradient,
   color: #FF5126;
 }
 
+.team-member {
+    text-align: center;
+    margin-bottom: 15px;
+}
 
+.team-member > img {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+}

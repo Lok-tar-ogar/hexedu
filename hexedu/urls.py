@@ -33,4 +33,9 @@ urlpatterns = [
     url(r'^ca$', views.ca),
     url(r'^europe$', views.europe),
     url(r'^asia', views.asia),
+    url(r'^profession', views.profession),
+    url(r'^about', views.about),
+    url(r'^cooperate', views.cooperate),
+    url(r'^elite', views.elite),
+    url(r'^contact', views.contact),
 ]

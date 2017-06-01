@@ -1,0 +1,123 @@
+{% extends 'inc/master.html' %}
+
+{% block title %}
+
+{% endblock %}
+
+{% block head %}
+    <script>
+        $(document).ready(function () {
+            $('#about').prop('class', 'active');
+        });
+    </script>
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=MZYGaWuRecqQqPApZfimgzcYOYpLAVDW"></script>
+{% endblock %}
+
+
+{% block content %}
+    <section id="about-company" class="padding-top wow fadeInUp" data-wow-duration="400ms" data-wow-delay="400ms">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 text-center">
+                    <img src="/static/images/aboutus/5.png" class="margin-bottom" alt="四川恒心前途教育咨询有限公司">
+                    <h1 class="margin-bottom">
+                        <img src="/static/images/aboutus/bg.png" class="margin-bottom" alt="四川恒心前途教育咨询有限公司">
+                        联系我们
+                    </h1>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <div class="container text-center" style="margin-top:80px; margin-bottom: 80px;">
+        <div class="col-xs-6">
+            <div class="feature-left fadeInLeft wow" data-wow-duration="400ms" data-wow-delay="400ms">
+                <span class="icon">
+                    <i class="fa fa-mobile"></i>
+                </span>
+                <div class="feature-copy text-left">
+                    <h5>
+                        手机电话：18190741735 & 18190747817
+                    </h5>
+                </div>
+            </div>
+
+            <div class="feature-left fadeInLeft wow" data-wow-duration="430ms" data-wow-delay="430ms">
+                <span class="icon">
+                    <i class="fa fa-phone"></i>
+                </span>
+                <div class="feature-copy text-left">
+                    <h5>
+                        座机：(86)028-6263-9653
+                    </h5>
+                </div>
+            </div>
+
+            <div class="feature-left fadeInLeft wow" data-wow-duration="460ms" data-wow-delay="460ms">
+                <span class="icon">
+                    <i class="fa fa-qq"></i>
+                </span>
+                <div class="feature-copy text-left">
+                    <h5>客服QQ：2582837511</h5>
+                </div>
+            </div>
+
+            <div class="feature-left fadeInLeft wow" data-wow-duration="490ms" data-wow-delay="490ms">
+                <span class="icon">
+                    <i class="fa fa-weixin"></i>
+                </span>
+                <div class="feature-copy text-left">
+                    <h5>客服微信：Hengxinqiantu</h5>
+                </div>
+            </div>
+            <div class="feature-left fadeInLeft wow" data-wow-duration="520ms" data-wow-delay="520ms">
+                <span class="icon">
+                    <i class="fa fa-envelope-o"></i>
+                </span>
+                <div class="feature-copy text-left">
+                    <h5>邮箱：info@hexedu.com</h5>
+                </div>
+            </div>
+            <div class="feature-left fadeInLeft wow" data-wow-duration="550ms" data-wow-delay="550ms">
+                <span class="icon">
+                    <i class="fa fa-location-arrow"></i>
+                </span>
+                <div class="feature-copy text-left">
+                    <h5>地址：四川省成都市高新区天府大道中段666号希顿国际广场C座1203室</h5>
+                </div>
+            </div>
+            <div class="feature-left fadeInLeft wow" data-wow-duration="580ms" data-wow-delay="580ms">
+                <span class="icon">
+                    <i class="fa fa-car"></i>
+                </span>
+                <div class="feature-copy text-left">
+                    <h5>乘车路线：乘坐地铁1号线至天府三街站，北方向出发，沿天府大道中段辅路走190米，左转 走80米到达</h5>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="col-xs-6" >
+            <div id="allmap" style="width: 100%;height:500px;box-shadow: 0px 14px 30px -15px rgba(0, 0, 0, 0.75);"></div>
+            <script type="text/javascript">
+                // 百度地图API功能
+                var map = new BMap.Map("allmap");
+                var point = new BMap.Point(104.07449,30.554679);
+                map.centerAndZoom(point, 15);
+                {#                            var marker = new BMap.Marker(point);  // 创建标注#}
+                {#                            map.addOverlay(marker);               // 将标注添加到地图中#}
+                {#                            marker.setAnimation(BMAP_ANIMATION_BOUNCE); //跳动的动画#}
+                var marker = new BMap.Marker(point);// 创建标注
+                map.addOverlay(marker);             // 将标注添加到地图中
+                marker.disableDragging();
+                map.addControl(new BMap.NavigationControl());        // 添加平移缩放控件
+                map.addControl(new BMap.ScaleControl());             // 添加比例尺控件
+                map.addControl(new BMap.OverviewMapControl());       //添加缩略地图控件
+                map.enableScrollWheelZoom();                         //启用滚轮放大缩小
+                map.disable3DBuilding();
+            </script>
+
+        </div>
+    </div>
+{% endblock %}

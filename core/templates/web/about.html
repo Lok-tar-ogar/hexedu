@@ -1,0 +1,295 @@
+{% extends 'inc/master.html' %}
+
+{% block title %}
+
+{% endblock %}
+
+{% block head %}
+    <script src="/static/js/Chart.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#about').prop('class', 'active');
+        });
+    </script>
+{% endblock %}
+
+
+{% block content %}
+
+{#    <section id="page-breadcrumb">#}
+{#        <div class="vertical-center sun">#}
+{#            <div class="container">#}
+{#                <div class="row">#}
+{#                    <div class="action">#}
+{#                        <div class="col-sm-12">#}
+{#                            <h1 class="title">关于我们</h1>#}
+{#                            <p>Why our Clients love to work with us.</p>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                </div>#}
+{#            </div>#}
+{#        </div>#}
+{#    </section>#}
+    <!--/#page-breadcrumb-->
+
+    <section id="about-company" class="padding-top wow fadeInUp" data-wow-duration="400ms" data-wow-delay="400ms">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 text-center">
+                    <img src="/static/images/aboutus/5.png" class="margin-bottom" alt="">
+                    <h1 class="margin-bottom">四川恒心前途教育咨询有限公司</h1>
+                    {#                    <p>我们是成立于2016年的留学群体一站式服务机构。#}
+                    {#                        <br />#}
+                    {#                        我们向留学生群体提供从名校直通、课业辅导、学历学位认证到职业规划的一站式服务。#}
+                    {#                        <br/>#}
+                    {#                        同时，还针对国内有留学意愿的群体，开通了海外短期游学、就业培训、移民落户指导等项目。#}
+                    {#                        aliqua cillum dolore sed do in.#}
+                    {#                    </p>#}
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--/#about-company-->
+
+    <section id="services">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4 text-center padding wow fadeIn" data-wow-duration="1000ms" data-wow-delay="300ms">
+                    <div class="single-service">
+                        <div class="wow scaleIn" data-wow-duration="500ms" data-wow-delay="300ms">
+                            <img src="/static/images/home/icon1.png" alt="">
+                        </div>
+                        <h2>年轻却不轻狂的团队</h2>
+                        <p class="text-left"><i class="fa fa-angle-right"></i>恒心团队多由海外名校毕业，年龄层与目标客户群体相仿，能精准把握当下留学生的心态与需求。</p>
+                        <p class="text-left"><i class="fa fa-angle-right"></i>源源不绝的创新与构想打破传统营销推广模式，更多需求者的福音。</p>
+                        <p class="text-left"><i class="fa fa-angle-right"></i>强大的IT技术让资源与客户大数据平台的搭建变得精准而简单。</p>
+                    </div>
+                </div>
+                <div class="col-sm-4 text-center padding wow fadeIn" data-wow-duration="1000ms" data-wow-delay="600ms">
+                    <div class="single-service">
+                        <div class="wow scaleIn" data-wow-duration="500ms" data-wow-delay="600ms">
+                            <img src="/static/images/home/icon2.png" alt="">
+                        </div>
+                        <h2>细化却不僵化的服务</h2>
+                        <p class="text-left"><i class="fa fa-angle-right"></i>一对一客服随时待命，多轮沟通，全面掌握客户现状与需求。</p>
+                        <p class="text-left"><i class="fa fa-angle-right"></i>针对不同人群现状，灵活制定多种可对比解决方案，让选择权始终在客户手中。</p>
+                        <p class="text-left"><i class="fa fa-angle-right"></i>全程跟进答疑，每阶段准时反馈，辅之官网进度查询功能，每一步都让客户安心。</p>
+                        <p class="text-left"><i class="fa fa-angle-right"></i>核心项目均为一手优质资源，保证最低的价格，最快的速度，最贴心的服务与最完美的结果。</p>
+                    </div>
+                </div>
+                <div class="col-sm-4 text-center padding wow fadeIn" data-wow-duration="1000ms" data-wow-delay="900ms">
+                    <div class="single-service">
+                        <div class="wow scaleIn" data-wow-duration="500ms" data-wow-delay="900ms">
+                            <img src="/static/images/home/icon3.png" alt="">
+                        </div>
+                        <h2>大同却大不同的体验</h2>
+                        <p class="text-left"><i class="fa fa-angle-right"></i>全球代理四方汇集最及时的需求动态与政策走向。</p>
+                        <p class="text-left"><i class="fa fa-angle-right"></i>完备的售后体系与健全的应急备案作保障，决不让任何一个客户空手而归。</p>
+                        <p class="text-left"><i class="fa fa-angle-right"></i>会员奖励机制让每一个来到恒心的人在被服务的同时，还能有利可图。</p>
+                        <p class="text-left"><i class="fa fa-angle-right"></i>不定期开展留学生线上活动，动动手指就能让课余生活变得有声有色。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="action">
+        <div class="vertical-center">
+            <div class="container">
+                <div class="row">
+                    <div class="action count">
+                        <div class="col-sm-3 text-center wow bounceIn" data-wow-duration="1000ms" data-wow-delay="300ms">
+                            <h1 class="timer bold" data-to="2" data-speed="3000" data-from="0"></h1>
+                            <h3>年业内口碑名列前茅</h3>
+                        </div>
+                        <div class="col-sm-3 text-center wow bounceIn" data-wow-duration="1000ms" data-wow-delay="300ms">
+                            <h1 class="timer bold" data-to="100" data-speed="3000" data-from="0"></h1>
+                            <h3>名国内外优质名师汇聚</h3>
+                        </div>
+                        <div class="col-sm-3 text-center wow bounceIn" data-wow-duration="1000ms" data-wow-delay="300ms">
+                            <h1 class="timer bold" data-to="200" data-speed="3000" data-from="0"></h1>
+                            <h3>名国内外优质名师汇聚</h3>
+                        </div>
+                        <div class="col-sm-3 text-center wow bounceIn" data-wow-duration="1000ms" data-wow-delay="300ms">
+                            <h1 class="timer bold" data-to="98" data-speed="3000" data-from="0"></h1>
+                            <h3>%办理成功率</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="company-information" class="padding-top">
+        <div class="container">
+            <div class="row">
+                <div class="about-us">
+                    <div class="col-sm-8 wow fadeInLeft" data-wow-duration="1000ms" data-wow-delay="300ms">
+                        <h2 class="bold">关于恒心前途</h2>
+                        <div class="row">
+                            <div class="col-sm-5">
+                                <img src="/static/images/aboutus/6.png" class="img-responsive" alt="">
+                            </div>
+                            <div class="col-sm-7">
+                                <h3 class="top-zero">Who we are</h3>
+                                <p>我们是成立于2016年的留学群体一站式服务机构。</p>
+                                <p>我们向留学生群体提供从名校直通、课业辅导、学历学位认证到职业规划的一站式服务。同时，还针对国内有留学意愿的群体，开通了海外短期游学、就业培训、移民落户指导等项目。</p>
+                                <p>We are unique, 我们只是比别人多了一点恒心。</p>
+                                <p>You are fortunate, 你只是比别人多了恒心。</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 wow fadeInRight" data-wow-duration="1000ms" data-wow-delay="300ms">
+                        <div class="our-skills">
+                            <h2 class="bold">有多少人选择了我们</h2>
+                            <canvas id="myChart" style="width:300px!important;height:300px!important;"></canvas>
+                            <script>
+                                new Chart(document.getElementById("myChart"),
+                                    {
+                                        "type":"doughnut",
+                                        "data":{"labels":["出国留学","学历学位认证","学术辅导"],
+                                            "datasets":[{"label":"My First Dataset",
+                                                "data":[50,50,200],
+                                                "backgroundColor":["rgb(255, 99, 132)","rgb(54, 162, 235)","rgb(255, 205, 86)"]
+                                            }]
+                                        }
+                                    });
+                            </script>
+                            {#                            <div class="single-skill">#}
+                            {#                                <h3>学历学位认证</h3>#}
+                            {#                                <div class="progress">#}
+                            {#                                    <div class="progress-bar progress-bar-primary six-sec-ease-in-out" role="progressbar"  data-transition="98">98%</div>#}
+                            {#                                </div>#}
+                            {#                            </div>#}
+                            {#                            <div class="single-skill">#}
+                            {#                                <h3>留学申请</h3>#}
+                            {#                                <div class="progress">#}
+                            {#                                    <div class="progress-bar progress-bar-primary six-sec-ease-in-out" role="progressbar"  data-transition="100">100%</div>#}
+                            {#                                </div>#}
+                            {#                            </div>#}
+                            {#                            <div class="single-skill">#}
+                            {#                                <h3>学术辅导</h3>#}
+                            {#                                <div class="progress">#}
+                            {#                                    <div class="progress-bar progress-bar-primary six-sec-ease-in-out" role="progressbar"  data-transition="100">100%</div>#}
+                            {#                                </div>#}
+                            {#                            </div>#}
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="customer" style="padding: 85px 0;">
+        <div class="container">
+            <div class="row">
+                <h1 class="title text-center wow fadeInDown" data-wow-duration="500ms" data-wow-delay="300ms">我们的客户有话说</h1>
+
+                <div id="customer-carousel" class="carousel slide wow fadeIn" data-ride="carousel" data-wow-duration="400ms" data-wow-delay="400ms" style="margin-top: 80px;">
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators visible-xs">
+                        <li data-target="#customer-carousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#customer-carousel" data-slide-to="1"></li>
+                    </ol>
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner">
+                        <div class="item active">
+                            <div class="col-sm-3 col-xs-6">
+                                <div class="team-member">
+                                    <img src="/static/images/aboutus/1.jpg" class="img-responsive img-circle" alt="Person">
+                                    <div class="member-info">
+                                        <h3 class="name">John Trice</h3>
+
+                                        <p class="short-bio">任达华出来！</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-3 col-xs-6">
+                                <div class="team-member">
+                                    <img src="/static/images/aboutus/2.jpg" class="img-responsive img-circle" alt="Person">
+                                    <div class="member-info">
+                                        <h3 class="name">With How</h3>
+
+                                        <p class="short-bio">任达华出来！</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-3 col-xs-6">
+                                <div class="team-member">
+                                    <img src="/static/images/aboutus/3.jpg" class="img-responsive img-circle" alt="Person">
+                                    <div class="member-info">
+                                        <h3 class="name">Rita</h3>
+
+                                        <p class="short-bio">任达华出来！</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-3 col-xs-6">
+                                <div class="team-member">
+                                    <img src="/static/images/aboutus/4.jpg" class="img-responsive img-circle" alt="Person">
+                                    <div class="member-info">
+                                        <h3 class="name">Arnold Lee</h3>
+
+                                        <p class="short-bio">任达华出来！</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="col-sm-3 col-xs-6">
+                                <div class="team-member">
+                                    <img src="/static/images/aboutus/10.jpg" class="img-responsive img-circle" alt="Person">
+                                    <div class="member-info">
+                                        <h3 class="name">sword boob</h3>
+
+                                        <p class="short-bio">任达华出来！</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-3 col-xs-6">
+                                <div class="team-member">
+                                    <img src="/static/images/aboutus/2.jpg" class="img-responsive img-circle" alt="Person">
+                                    <div class="member-info">
+                                        <h3 class="name">With How</h3>
+
+                                        <p class="short-bio">任达华出来！</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-3 col-xs-6">
+                                <div class="team-member">
+                                    <img src="/static/images/aboutus/3.jpg" class="img-responsive img-circle" alt="Person">
+                                    <div class="member-info">
+                                        <h3 class="name">Rita</h3>
+
+                                        <p class="short-bio">任达华出来！</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-3 col-xs-6">
+                                <div class="team-member">
+                                    <img src="/static/images/aboutus/4.jpg" class="img-responsive img-circle" alt="Person">
+                                    <div class="member-info">
+                                        <h3 class="name">Arnold Lee</h3>
+
+                                        <p class="short-bio">任达华出来！</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Controls -->
+                    <a class="left team-carousel-control hidden-xs" href="#customer-carousel" data-slide="prev">left</a>
+                    <a class="right team-carousel-control hidden-xs" href="#customer-carousel" data-slide="next">right</a>
+                </div>
+
+                <p class="text-center wow fadeInDown" data-wow-duration="400ms" data-wow-delay="400ms" style="color:#C03035">
+                    (由于保护客户隐私，并未提供真实头像)
+                </p>
+            </div>
+        </div>
+    </section>
+{% endblock %}
