@@ -38,4 +38,6 @@ urlpatterns = [
     url(r'^cooperate', views.cooperate),
     url(r'^elite', views.elite),
     url(r'^contact', views.contact),
+    url(r'^car', views.car),
+    url(r'^housekeep', views.housekeep),
 ]

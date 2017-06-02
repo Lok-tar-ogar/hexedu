@@ -1,0 +1,112 @@
+{% extends 'inc/master.html' %}
+
+{% block title %}
+
+{% endblock %}
+
+{% block head %}
+    <script>
+        $(document).ready(function () {
+            $('#live').prop('class', 'active');
+        });
+    </script>
+{% endblock %}
+
+{% block content %}
+    <section id="home-slider">
+        <div class="container">
+            <div class="row">
+                <div class="main-slider">
+                    <div class="slider-text">
+                        <h1>恒心微管家</h1>
+                        <p class="normal-p">恒心会员最贴心的免费福利，精心料理你留学路上的衣食住行。</p>
+                    </div>
+                    <img src="/static/images/home/slider/hill.png" class="slider-hill" alt="slider image">
+                    <img src="/static/images/home/slider/house.png" class="slider-house" alt="slider image">
+                    <img src="/static/images/home/slider/sun.png" class="slider-sun" alt="slider image">
+                    <img src="/static/images/home/slider/birds1.png" class="slider-birds1" alt="slider image">
+                    <img src="/static/images/home/slider/birds2.png" class="slider-birds2" alt="slider image">
+                </div>
+            </div>
+        </div>
+        <div class="preloader"><i class="fa fa-sun-o fa-spin"></i></div>
+    </section>
+
+    <div class="container text-center margin-bottom">
+        <h1 class="">
+            <img src="/static/images/aboutus/bg.png" class="margin-bottom" alt="学历学位认证-四川恒心前途教育咨询有限公司">
+            我们的服务
+        </h1>
+    </div>
+
+    <section id="services">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-3 text-center padding wow fadeIn" data-wow-duration="1000ms" data-wow-delay="300ms">
+                    <div class="single-service">
+                        <div class="wow scaleIn" data-wow-duration="500ms" data-wow-delay="300ms">
+                            <img src="/static/images/home/icon1.png" alt="">
+                        </div>
+                        <h2>餐厅推荐</h2>
+                        <p class="text-left normal-p"><i class="fa fa-angle-right"></i>作为吃吃拯救世界的中国人，就应该走到哪儿，尝到哪儿。</p>
+                        <p class="text-left normal-p"><i class="fa fa-angle-right"></i>要去哪儿才能满足被家乡养刁惯坏了的嘴？</p>
+                        <p class="text-left normal-p"><i class="fa fa-angle-right"></i>要怎么才能把索然的留学生活拌得有滋有味？</p>
+                        <p class="text-left normal-p"><i class="fa fa-angle-right"></i>一句话就能替你指条明路，我们定当尽力效劳。</p>
+                    </div>
+                </div>
+                <div class="col-sm-3 text-center padding wow fadeIn" data-wow-duration="1000ms" data-wow-delay="600ms">
+                    <div class="single-service">
+                        <div class="wow scaleIn" data-wow-duration="500ms" data-wow-delay="600ms">
+                            <img src="/static/images/home/icon2.png" alt="">
+                        </div>
+                        <h2>机票预定</h2>
+                        <p class="text-left normal-p"><i class="fa fa-angle-right"></i>
+                            订机票这种事，简单又繁琐，讨厌却又不得不做，
+                            那就交给我们来做好了，麻烦动动手指，留下需求
+                            我们让你想多久飞，就多久飞；想飞多久，就飞多久
+                        </p>
+
+                    </div>
+                </div>
+                <div class="col-sm-3 text-center padding wow fadeIn" data-wow-duration="1000ms" data-wow-delay="900ms">
+                    <div class="single-service">
+                        <div class="wow scaleIn" data-wow-duration="500ms" data-wow-delay="900ms">
+                            <img src="/static/images/home/icon3.png" alt="">
+                        </div>
+                        <h2>经法咨询</h2>
+                        <p class="text-left normal-p"><i class="fa fa-angle-right"></i>
+                            任何事情，都有规律与原则可寻
+                            如果连这都不知道，你还怎么愉快玩耍？
+
+                        </p>
+                        <p class="text-left normal-p"><i class="fa fa-angle-right"></i>
+                            出门在外，钱财与法律才是最好的防护武器
+                            恒心帮你举盾捍卫，应有的权利
+
+                        </p>
+
+                    </div>
+                </div>
+
+                <div class="col-sm-3 text-center padding wow fadeIn" data-wow-duration="1000ms" data-wow-delay="1200ms">
+                    <div class="single-service">
+                        <div class="wow scaleIn" data-wow-duration="500ms" data-wow-delay="1200ms">
+                            <img src="/static/images/services/1.png" alt="">
+                        </div>
+                        <h2>住房信息</h2>
+                        <p class="text-left normal-p"><i class="fa fa-angle-right"></i>
+                            IEP、ESL等语言考试辅导
+                        </p>
+                        <p class="text-left normal-p"><i class="fa fa-angle-right"></i>
+                            各专业单科考前辅导
+                        </p>
+                        <p class="text-left normal-p"><i class="fa fa-angle-right"></i>
+                            雅思、托福、GMAT、GRE、SAT等常规考试辅导
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}

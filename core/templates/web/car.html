@@ -1,0 +1,218 @@
+{% extends 'inc/master.html' %}
+
+{% block title %}
+
+{% endblock %}
+
+{% block head %}
+    <script>
+        $(document).ready(function () {
+            $('#live').prop('class', 'active');
+        });
+    </script>
+{% endblock %}
+
+{% block content %}
+    <section id="home-slider">
+        <div class="container">
+            <div class="row">
+                <div class="main-slider">
+                    <div class="slider-text">
+                        <h1>留学生免税车购置</h1>
+                        <p class="normal-p">为鼓励我在外留学人员毕业后回国工作，国家七部委于<strong>1992年10月</strong>制定了留学回国人员购买自用小汽车的优惠政策。毕业回国一年内申请购车享受减免税的优惠。</p>
+                    </div>
+                    <img src="/static/images/home/slider/hill.png" class="slider-hill" alt="slider image">
+                    <img src="/static/images/home/slider/house.png" class="slider-house" alt="slider image">
+                    <img src="/static/images/home/slider/sun.png" class="slider-sun" alt="slider image">
+                    <img src="/static/images/home/slider/birds1.png" class="slider-birds1" alt="slider image">
+                    <img src="/static/images/home/slider/birds2.png" class="slider-birds2" alt="slider image">
+                </div>
+            </div>
+        </div>
+        <div class="preloader"><i class="fa fa-sun-o fa-spin"></i></div>
+    </section>
+
+    <div class="container text-center margin-bottom">
+        <h1 class="">
+            <img src="/static/images/aboutus/bg.png" class="margin-bottom" alt="学历学位认证-四川恒心前途教育咨询有限公司">
+            免税车有何优惠？
+        </h1>
+    </div>
+
+    <div class="container text-center margin-bottom">
+        <div class="col-xs-6">
+            <div class="feature-left fadeInLeft wow" data-wow-duration="300ms" data-wow-delay="600ms">
+                <span class="icon">
+                    <span class="number">1</span>
+                </span>
+                <div class="feature-copy text-left">
+                    <h5>购车时享受免除进口零部件海关关税的优惠购车价格。</h5>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-6">
+            <div class="feature-left fadeInLeft wow" data-wow-duration="300ms" data-wow-delay="600ms">
+                <span class="icon">
+                    <span class="number">2</span>
+                </span>
+                <div class="feature-copy text-left">
+                    <h5>
+                        上牌落户时免缴车辆购置税(税额计算方法：市场零售价÷11.7)
+                    </h5>
+                    <h5 >
+                        以2014款奥迪A4L 1.8T舒适型为例：
+                    </h5>
+                    <h5>
+                        市场指导价：293,600元，购置税金额：293,600÷11.7=25,090元
+                    </h5>
+                    <h5>
+                        <strong>留学生免税价：</strong><strong style="color:rgb(192, 48, 53);">248,040</strong>元（2014年2季度价格）
+                    </h5>
+                    <h5>
+                        普通人购车： 需支付<strong style="color:rgb(192, 48, 53);">293,600</strong>元提车，上牌照还需缴纳车辆购置税25,090元，购车总费用
+                        为293,600+25,090=<strong style="color:rgb(192, 48, 53);">318,690</strong>元
+                    </h5>
+                    <h5>
+                        <strong>留学生购车：</strong> 按免税价格<strong style="color:rgb(192, 48, 53);">248,040</strong>元购车，上牌时不用缴纳购置税，购车总费用即<strong style="color:rgb(192, 48, 53);">248,040</strong>元，
+                        共节省318,690-248,040 =<strong style="color:rgb(192, 48, 53);">70,650</strong>元
+                    </h5>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="container text-center margin-bottom">
+        <h1 class="">
+            <img src="/static/images/aboutus/bg.png" class="margin-bottom" alt="学历学位认证-四川恒心前途教育咨询有限公司">
+            免税车型范围&购车条件
+        </h1>
+    </div>
+    <div class="container text-center margin-bottom">
+        <div class="col-xs-6">
+            <div class="feature-left fadeInLeft wow" data-wow-duration="300ms" data-wow-delay="600ms">
+                <span class="icon">
+                    <span class="number">1</span>
+                </span>
+                <div class="feature-copy text-left">
+                    <h5><strong>免税车型范围：</strong>经海关批准的国内定点轿车生产企业生产的车型可以办理免税购车申请，大部分合资品牌都已进入免税车型清单。原装进口车型及不在免税范围内的国产车型不享受此免税政策。</h5>
+                    <h5>可供购买的免税车型及价格请查阅<a href="/static/download/免税车型价格表.xls">《免税国产汽车价目表》</a>栏目。</h5>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="col-xs-6">
+            <div class="feature-left fadeInLeft wow" data-wow-duration="300ms" data-wow-delay="600ms">
+                <span class="icon">
+                    <span class="number">1</span>
+                </span>
+                <div class="feature-copy text-left">
+                    <h5><strong>申请条件：</strong>以学习和进修为目的，在国外正规大学、学院、科研机构求学、攻读学位、进修业务或从事科学研究
+                        及进行学术交流一学年以上。(最低为9个月以上)。</h5>
+                </div>
+            </div>
+            <div class="feature-left fadeInLeft wow" data-wow-duration="300ms" data-wow-delay="600ms">
+                <span class="icon">
+                    <span class="number">2</span>
+                </span>
+                <div class="feature-copy text-left">
+                    <h5>完成学业后两年内回国。</h5>
+                </div>
+            </div>
+            <div class="feature-left fadeInLeft wow" data-wow-duration="300ms" data-wow-delay="600ms">
+                <span class="icon">
+                    <span class="number">3</span>
+                </span>
+                <div class="feature-copy text-left">
+                    <h5>毕业后首次入境未超过一年。</h5>
+                </div>
+            </div>
+            <div class="feature-left fadeInLeft wow" data-wow-duration="300ms" data-wow-delay="600ms">
+                <span class="icon">
+                    <span class="number">4</span>
+                </span>
+                <div class="feature-copy text-left">
+                    <h5>购买免税车计一件免税指标。 (在学期间连续在外满180天有一件指标，中途回国停留不超过30天的可
+                        视为连续在外，并可计入购车免税指标天数，若停留时间超过30天则不能连续计算。)</h5>
+                </div>
+            </div>
+            <div class="feature-left fadeInLeft wow" data-wow-duration="300ms" data-wow-delay="600ms">
+                <span class="icon">
+                    <span class="number">5</span>
+                </span>
+                <div class="feature-copy text-left">
+                    <h5>在我国香港、澳门地区学习、进修的留学人员享受同样待遇。</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container text-center margin-bottom">
+        <h1 class="">
+            <img src="/static/images/aboutus/bg.png" class="margin-bottom" alt="学历学位认证-四川恒心前途教育咨询有限公司">
+            购置免税车所需材料
+        </h1>
+    </div>
+    <div class="container text-center margin-bottom">
+        <div class="col-xs-6">
+            <div class="feature-left fadeInLeft wow" data-wow-duration="300ms" data-wow-delay="600ms">
+                <span class="icon">
+                    <span class="number">1</span>
+                </span>
+                <div class="feature-copy text-left">
+                    <h5>《留学回国人员证明》(回国前在中国驻外使领馆开具)</h5>
+                </div>
+            </div>
+            <div class="feature-left fadeInLeft wow" data-wow-duration="300ms" data-wow-delay="600ms">
+                <span class="icon">
+                    <span class="number">2</span>
+                </span>
+                <div class="feature-copy text-left">
+                    <h5>《毕业证书》或《学位证书》；如果是访问学者或进修人员需提供国外校方出具的证明信件</h5>
+                </div>
+            </div>
+
+        </div>
+        <div class="col-xs-6">
+            <div class="feature-left fadeInLeft wow" data-wow-duration="300ms" data-wow-delay="600ms">
+                <span class="icon">
+                    <span class="number">3</span>
+                </span>
+                <div class="feature-copy text-left">
+                    <h5>身份证</h5>
+                </div>
+            </div>
+            <div class="feature-left fadeInLeft wow" data-wow-duration="300ms" data-wow-delay="600ms">
+                <span class="icon">
+                    <span class="number">4</span>
+                </span>
+                <div class="feature-copy text-left">
+                    <h5>户口本</h5>
+                </div>
+            </div>
+            <div class="feature-left fadeInLeft wow" data-wow-duration="300ms" data-wow-delay="600ms">
+                <span class="icon">
+                    <span class="number">5</span>
+                </span>
+                <div class="feature-copy text-left">
+                    <h5>护照</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container text-center margin-bottom">
+        <h1 class="">
+            <img src="/static/images/aboutus/bg.png" class="margin-bottom" alt="学历学位认证-四川恒心前途教育咨询有限公司">
+            委托购车服务
+        </h1>
+    </div>
+    <div class="container margin-bottom">
+        <p class="normal-p">根据海关相关政策规定，留学回国人员购买免税汽车不进入流通领域和商业环节，须经海关审批直接向生产厂家购买。</p>
+        <p class="normal-p">由于涉及到生产地海关监管、进出口零部件的退税和购置附加税的免征，所以购买免税国产汽车要办理:汽车生产地海关有关手续,到工厂直接购买并办理运输手续,使用地车辆提取手续,使用地发票工商验证及免征购置附加税手续,验车、上牌照手续。异地奔波，办事程序繁琐会给购车者带来很多不便。</p>
+        <p class="normal-p">我们能为您提供以上服务，为您省心并节省宝贵时间和经费。</p>
+        <p class="normal-p" style="color:rgb(192, 48, 53);">特别提示：</p>
+        <p class="normal-p">重要提示：“首次入境日”的确定非常重要，申请有效期是从毕业后的“首次入境日”起一年内有效。海关是通过察看毕业证日期及护照中出入境纪录来确定“首次入境日”的，即毕业证日期后第一次回国就是“首次入境日”，即使是毕业后回国休假或探亲后又回到国外，也是从这次回国开始计算有效期；如果是在毕业证日期之前就已回国且不再出境(未参加毕业典礼,毕业证是毕业典礼后寄回国内的)，则这最后一次入境即算是“首次入境日”。同时，首次入境须在毕业后两年之内。如无把握请在回国后携带毕业证、留学回国人员证明及护照到我公司或海关咨询，以免过期。</p>
+
+    </div>
+{% endblock %}

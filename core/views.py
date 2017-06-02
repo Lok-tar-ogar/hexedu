@@ -139,3 +139,18 @@ def contact(req):
 
 def about(req):
     return render(req, "web/about.html", locals())
+
+
+def car(req):
+    '''
+    免税车
+    '''
+    return render(req, "web/car.html", locals())
+
+
+def housekeep(req):
+    '''
+    免税车
+    '''
+    return render(req, "web/housekeep.html", locals())
+

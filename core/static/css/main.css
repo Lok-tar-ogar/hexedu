@@ -3123,6 +3123,16 @@ span.stButton_gradient,
   font-size: 30px;
   color: #52d3aa;
 }
+
+.feature-left .icon .number {
+  display: table-cell;
+  vertical-align: middle;
+  font-size: 30px;
+  color: #52d3aa;
+  font-weight: 600;
+  /*font-style: italic;*/
+}
+
 .feature-left .feature-copy {
   float: left;
   width: 80%;
