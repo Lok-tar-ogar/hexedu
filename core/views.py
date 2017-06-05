@@ -154,3 +154,10 @@ def housekeep(req):
     '''
     return render(req, "web/housekeep.html", locals())
 
+
+def settle(req):
+    '''
+    一线城市落户
+    '''
+    return render(req, "web/settle.html", locals())
+

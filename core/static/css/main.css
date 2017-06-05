@@ -3252,3 +3252,24 @@ span.stButton_gradient,
     height: 200px;
     margin: 0 auto;
 }
+
+
+.circle-wrap {
+    width: 120px;
+    height: 120px;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    background-color: white;
+    border: 1px solid rgba(78,97,118,0.2);
+    margin: 0 auto;
+    margin-bottom: 15px;
+    color: #293c55;
+    -webkit-transition: 0.2s;
+    transition: 0.2s;
+}
+
+.mode {
+    display: block;
+    margin: 38px 0 2px;
+    font-size: 17px;
+}

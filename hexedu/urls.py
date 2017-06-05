@@ -27,8 +27,10 @@ urlpatterns = [
     url(r'^tour$', views.tour),
     url(r'^certification$', views.certification),
     url(r'^live$', views.live),
+
     url(r'^eb$', views.EB),
     url(r'^eb3$', views.EB3),
+
     url(r'^usa$', views.usa),
     url(r'^ca$', views.ca),
     url(r'^europe$', views.europe),
@@ -40,4 +42,5 @@ urlpatterns = [
     url(r'^contact', views.contact),
     url(r'^car', views.car),
     url(r'^housekeep', views.housekeep),
+    url(r'^settle', views.settle),
 ]
