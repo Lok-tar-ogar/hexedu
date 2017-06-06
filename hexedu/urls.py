@@ -30,16 +30,24 @@ urlpatterns = [
 
     url(r'^eb$', views.EB),
     url(r'^eb3$', views.EB3),
+    url(r'^eb5$', views.EB5),
+
+    url(r'^resume', views.resume),
+    url(r'^personnel$', views.personnel),
+    url(r'^train$', views.train),
+
 
     url(r'^usa$', views.usa),
     url(r'^ca$', views.ca),
     url(r'^europe$', views.europe),
     url(r'^asia', views.asia),
+
     url(r'^profession', views.profession),
     url(r'^about', views.about),
     url(r'^cooperate', views.cooperate),
     url(r'^elite', views.elite),
     url(r'^contact', views.contact),
+
     url(r'^car', views.car),
     url(r'^housekeep', views.housekeep),
     url(r'^settle', views.settle),

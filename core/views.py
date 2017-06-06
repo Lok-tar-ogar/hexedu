@@ -72,6 +72,13 @@ def EB3(req):
     return render(req, "web/EB-3.html", locals())
 
 
+def EB5(req):
+    '''
+    移民落户EB-3
+    '''
+    return render(req, "web/EB-5.html", locals())
+
+
 def usa(req):
     '''
     美国
