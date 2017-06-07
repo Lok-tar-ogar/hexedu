@@ -168,3 +168,17 @@ def settle(req):
     '''
     return render(req, "web/settle.html", locals())
 
+
+def develop(req):
+    '''
+    一线城市落户
+    '''
+    return render(req, "web/develop.html", locals())
+
+
+def app_detail(req):
+    '''
+    大学详情页面
+    '''
+    return render(req, "web/apply_detail.html", locals())
+

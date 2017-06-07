@@ -20,7 +20,10 @@ from core import views
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', views.index),
+
     url(r'^apply$', views.apply),
+    url(r'^detail$', views.app_detail),
+
     url(r'^information$', views.information),
     url(r'^information/1$', views.information_detail),
     url(r'^guidance$', views.guidance),
@@ -47,8 +50,10 @@ urlpatterns = [
     url(r'^cooperate', views.cooperate),
     url(r'^elite', views.elite),
     url(r'^contact', views.contact),
+    url(r'^develop', views.develop),
 
     url(r'^car', views.car),
     url(r'^housekeep', views.housekeep),
     url(r'^settle', views.settle),
+
 ]

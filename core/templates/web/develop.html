@@ -1,0 +1,286 @@
+{% extends 'inc/master.html' %}
+
+{% block title %}
+
+{% endblock %}
+
+{% block head %}
+    <script>
+        $(document).ready(function () {
+            $('#about').prop('class', 'active');
+            $('#develop').prop('class', 'active');
+        });
+    </script>
+{% endblock %}
+
+
+{% block content %}
+
+    <section id="page-breadcrumb">
+        <div class="vertical-center sun">
+            <div class="container">
+                <div class="row">
+                    <div class="action">
+                        <div class="col-sm-12">
+                            <h1 class="title">发展历程</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--/#page-breadcrumb-->
+
+    <section id="blog" class="padding-bottom">
+        <div class="container">
+            <div class="row">
+                <div class="timeline-blog overflow padding-top">
+                    <div class="timeline-date text-center">
+                        <a href="#" class="btn btn-common uppercase">2012年</a>
+                    </div>
+                    <div class="timeline-divider overflow padding-bottom">
+                        <div class="col-sm-6 padding-right arrow-right wow fadeInLeft" data-wow-duration="1000ms" data-wow-delay="300ms">
+                            <div class="single-blog timeline">
+                                <div class="single-blog-wrapper">
+                                    <div class="post-thumb">
+                                        <img src="/static/images/blog/timeline/1.jpg" class="img-responsive" alt="">
+                                        <div class="post-overlay">
+                                            <span class="uppercase"><a href="#">14<br><small>5月</small></a></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="post-content overflow">
+                                    <h2 class="post-title bold"><a href="#">2012.5.14成立工作室</a></h2>
+                                    {#                                    <h3 class="post-author"><a href="#">Posted by micron News</a></h3>#}
+                                    <p>2012.5.14 于美国丹佛成立恒心前途教育咨询工作室，立志于帮助中国学生实现他们的赴美留学梦。</p>
+                                    {#                                    <a href="#" class="read-more">View More</a>#}
+                                    <div class="post-bottom overflow">
+                                        <span class="post-date pull-left">May 14, 2012</span>
+                                        {#                                        <span class="comments-number pull-right"><a href="#">3 comments</a></span>#}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        {#                        <div class="col-sm-6 padding-left padding-top arrow-left wow fadeInRight" data-wow-duration="1000ms" data-wow-delay="300ms">#}
+                        {#                            <div class="single-blog timeline">#}
+                        {#                                <div class="single-blog-wrapper">#}
+                        {#                                    <div class="post-thumb">#}
+                        {#                                        <img src="/static/images/blog/timeline/2.jpg" class="img-responsive" alt="">#}
+                        {#                                        <div class="post-overlay">#}
+                        {#                                            <span class="uppercase"><a href="#">14 <br><small>Feb</small></a></span>#}
+                        {#                                        </div>#}
+                        {#                                    </div>#}
+                        {#                                </div>#}
+                        {#                                <div class="post-content overflow">#}
+                        {#                                    <h2 class="post-title bold"><a href="##">Advanced business cards design</a></h2>#}
+                        {#                                    <h3 class="post-author"><a href="#">Posted by micron News</a></h3>#}
+                        {#                                    <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber [...]</p>#}
+                        {#                                    <a href="#" class="read-more">View More</a>#}
+                        {#                                    <div class="post-bottom overflow">#}
+                        {#                                        <span class="post-date pull-left">February 11, 2014</span>#}
+                        {#                                        <span class="comments-number pull-right"><a href="#">3 comments</a></span>#}
+                        {#                                    </div>#}
+                        {#                                </div>#}
+                        {#                            </div>#}
+                        {#                        </div>#}
+                        {#                        <div class="col-sm-6 padding-right arrow-right wow fadeInLeft" data-wow-duration="1000ms" data-wow-delay="300ms">#}
+                        {#                            <div class="single-blog timeline">#}
+                        {#                                <div class="single-blog-wrapper">#}
+                        {#                                    <div class="post-thumb">#}
+                        {#                                        <iframe src="https://player.vimeo.com/video/95995577"></iframe>#}
+                        {#                                    </div>#}
+                        {#                                </div>#}
+                        {#                                <div class="post-content overflow">#}
+                        {#                                    <h2 class="post-title bold"><a href="#">Advanced business cards design</a></h2>#}
+                        {#                                    <h3 class="post-author"><a href="#">Posted by micron News</a></h3>#}
+                        {#                                    <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber [...]</p>#}
+                        {#                                    <a href="#" class="read-more">View More</a>#}
+                        {#                                    <div class="post-bottom overflow">#}
+                        {#                                        <span class="post-date pull-left">February 11, 2014</span>#}
+                        {#                                        <span class="comments-number pull-right"><a href="#">3 comments</a></span>#}
+                        {#                                    </div>#}
+                        {#                                </div>#}
+                        {#                            </div>#}
+                        {#                        </div>#}
+                    </div>
+                </div>
+                <div class="timeline-blog overflow">
+                    <div class="timeline-date text-center">
+                        <a href="" class="btn btn-common uppercase">2013-2015年</a>
+                    </div>
+                    <div class="timeline-divider overflow padding-bottom">
+                        {#                        <div class="col-sm-6 padding-right arrow-right wow fadeInLeft" data-wow-duration="1000ms" data-wow-delay="300ms">#}
+                        {#                            <div class="single-blog timeline">#}
+                        {#                                <div class="single-blog-wrapper">#}
+                        {#                                    <div class="post-thumb">#}
+                        {#                                        <img src="/static/images/blog/timeline/3.jpg" class="img-responsive" alt="">#}
+                        {#                                        <div class="post-overlay">#}
+                        {#                                            <span class="uppercase"><a href="#">14 <br><small>Feb</small></a></span>#}
+                        {#                                        </div>#}
+                        {#                                    </div>#}
+                        {#                                </div>#}
+                        {#                                <div class="post-content overflow">#}
+                        {#                                    <h2 class="post-title bold"><a href="#">Advanced business cards design</a></h2>#}
+                        {#                                    <h3 class="post-author"><a href="#">Posted by micron News</a></h3>#}
+                        {#                                    <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber [...]</p>#}
+                        {#                                    <a href="#" class="read-more">View More</a>#}
+                        {#                                    <div class="post-bottom overflow">#}
+                        {#                                        <span class="post-date pull-left">February 11, 2014</span>#}
+                        {#                                        <span class="comments-number pull-right"><a href="#">3 comments</a></span>#}
+                        {#                                    </div>#}
+                        {#                                </div>#}
+                        {#                            </div>#}
+                        {#                        </div>#}
+                        <div class="col-sm-6 col-sm-push-6 padding-left padding-top arrow-left wow fadeInRight" data-wow-duration="1000ms" data-wow-delay="300ms">
+                            <div class="single-blog timeline">
+                                <div class="single-blog-wrapper">
+                                    <div class="post-thumb">
+                                        <img src="/static/images/blog/timeline/4.jpg" class="img-responsive" alt="">
+                                        <div class="post-overlay">
+                                            <span class="uppercase"><a href="#">17 <br><small>12月</small></a></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="post-content overflow">
+                                    <h2 class="post-title bold"><a href="#">2013-2015年 成功实现70余名学生的赴美留学梦</a></h2>
+                                    <p>
+                                        在2013-2015年期间成功实现70余名中国学生的赴美留学梦，并且同时也完成了若干同学的课业辅导。
+                                    </p>
+                                    <div class="post-bottom overflow">
+                                        <span class="post-date pull-left">December 17, 2015</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-blog overflow">
+                    <div class="timeline-date text-center">
+                        <a href="#" class="btn btn-common uppercase">2016年</a>
+                    </div>
+                    <div class="timeline-divider overflow padding-bottom">
+                        <div class="col-sm-6 padding-right arrow-right wow fadeInLeft" data-wow-duration="1000ms" data-wow-delay="300ms">
+                            <div class="single-blog timeline">
+                                <div class="single-blog-wrapper">
+                                    <div class="post-thumb">
+                                        <img src="/static/images/blog/timeline/1.jpg" class="img-responsive" alt="">
+                                        <div class="post-overlay">
+                                            <span class="uppercase"><a href="#">5<br><small>12月</small></a></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="post-content overflow">
+                                    <h2 class="post-title bold"><a href="#">2016.12.5 成立四川恒心前途教育咨询有限公司</a></h2>
+                                    {#                                    <h3 class="post-author"><a href="#">Posted by micron News</a></h3>#}
+                                    {#                                    <p>2012.5.14 于美国丹佛成立恒心前途教育咨询工作室，立志于帮助中国学生实现他们的赴美留学梦。</p>#}
+                                    {#                                    <a href="#" class="read-more">View More</a>#}
+                                    <div class="post-bottom overflow">
+                                        <span class="post-date pull-left">December 5, 2015</span>
+                                        {#                                        <span class="comments-number pull-right"><a href="#">3 comments</a></span>#}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        {#                        <div class="col-sm-6 padding-left padding-top arrow-left wow fadeInRight" data-wow-duration="1000ms" data-wow-delay="300ms">#}
+                        {#                            <div class="single-blog timeline">#}
+                        {#                                <div class="single-blog-wrapper">#}
+                        {#                                    <div class="post-thumb">#}
+                        {#                                        <img src="/static/images/blog/timeline/2.jpg" class="img-responsive" alt="">#}
+                        {#                                        <div class="post-overlay">#}
+                        {#                                            <span class="uppercase"><a href="#">14 <br><small>Feb</small></a></span>#}
+                        {#                                        </div>#}
+                        {#                                    </div>#}
+                        {#                                </div>#}
+                        {#                                <div class="post-content overflow">#}
+                        {#                                    <h2 class="post-title bold"><a href="##">Advanced business cards design</a></h2>#}
+                        {#                                    <h3 class="post-author"><a href="#">Posted by micron News</a></h3>#}
+                        {#                                    <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber [...]</p>#}
+                        {#                                    <a href="#" class="read-more">View More</a>#}
+                        {#                                    <div class="post-bottom overflow">#}
+                        {#                                        <span class="post-date pull-left">February 11, 2014</span>#}
+                        {#                                        <span class="comments-number pull-right"><a href="#">3 comments</a></span>#}
+                        {#                                    </div>#}
+                        {#                                </div>#}
+                        {#                            </div>#}
+                        {#                        </div>#}
+                        {#                        <div class="col-sm-6 padding-right arrow-right wow fadeInLeft" data-wow-duration="1000ms" data-wow-delay="300ms">#}
+                        {#                            <div class="single-blog timeline">#}
+                        {#                                <div class="single-blog-wrapper">#}
+                        {#                                    <div class="post-thumb">#}
+                        {#                                        <iframe src="https://player.vimeo.com/video/95995577"></iframe>#}
+                        {#                                    </div>#}
+                        {#                                </div>#}
+                        {#                                <div class="post-content overflow">#}
+                        {#                                    <h2 class="post-title bold"><a href="#">Advanced business cards design</a></h2>#}
+                        {#                                    <h3 class="post-author"><a href="#">Posted by micron News</a></h3>#}
+                        {#                                    <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber [...]</p>#}
+                        {#                                    <a href="#" class="read-more">View More</a>#}
+                        {#                                    <div class="post-bottom overflow">#}
+                        {#                                        <span class="post-date pull-left">February 11, 2014</span>#}
+                        {#                                        <span class="comments-number pull-right"><a href="#">3 comments</a></span>#}
+                        {#                                    </div>#}
+                        {#                                </div>#}
+                        {#                            </div>#}
+                        {#                        </div>#}
+                    </div>
+                </div>
+                <div class="timeline-blog overflow">
+                    <div class="timeline-date text-center">
+                        <a href="" class="btn btn-common uppercase">2017年</a>
+                    </div>
+                    <div class="timeline-divider overflow padding-bottom">
+                        {#                        <div class="col-sm-6 padding-right arrow-right wow fadeInLeft" data-wow-duration="1000ms" data-wow-delay="300ms">#}
+                        {#                            <div class="single-blog timeline">#}
+                        {#                                <div class="single-blog-wrapper">#}
+                        {#                                    <div class="post-thumb">#}
+                        {#                                        <img src="/static/images/blog/timeline/3.jpg" class="img-responsive" alt="">#}
+                        {#                                        <div class="post-overlay">#}
+                        {#                                            <span class="uppercase"><a href="#">14 <br><small>Feb</small></a></span>#}
+                        {#                                        </div>#}
+                        {#                                    </div>#}
+                        {#                                </div>#}
+                        {#                                <div class="post-content overflow">#}
+                        {#                                    <h2 class="post-title bold"><a href="#">Advanced business cards design</a></h2>#}
+                        {#                                    <h3 class="post-author"><a href="#">Posted by micron News</a></h3>#}
+                        {#                                    <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber [...]</p>#}
+                        {#                                    <a href="#" class="read-more">View More</a>#}
+                        {#                                    <div class="post-bottom overflow">#}
+                        {#                                        <span class="post-date pull-left">February 11, 2014</span>#}
+                        {#                                        <span class="comments-number pull-right"><a href="#">3 comments</a></span>#}
+                        {#                                    </div>#}
+                        {#                                </div>#}
+                        {#                            </div>#}
+                        {#                        </div>#}
+                        <div class="col-sm-6 col-sm-push-6 padding-left padding-top arrow-left wow fadeInRight" data-wow-duration="1000ms" data-wow-delay="300ms">
+                            <div class="single-blog timeline">
+                                <div class="single-blog-wrapper">
+                                    <div class="post-thumb">
+                                        <img src="/static/images/blog/timeline/4.jpg" class="img-responsive" alt="">
+                                        <div class="post-overlay">
+                                            <span class="uppercase"><a href="#">25 <br><small>3月</small></a></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="post-content overflow">
+                                    <h2 class="post-title bold"><a href="#">2017年 入驻高新区人力资源产业园</a></h2>
+{#                                    <p>#}
+{#                                        在2013-2015年期间成功实现70余名中国学生的赴美留学梦，并且同时也完成了若干同学的课业辅导。#}
+{#                                    </p>#}
+                                    <div class="post-bottom overflow">
+                                        <span class="post-date pull-left">March  25, 2017</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="timeline-date text-center">
+                            <a href="#" class="btn btn-common">End</a>
+                        </div>
+            </div>
+        </div>
+    </section>
+    <!--/#blog-->
+
+{% endblock %}
