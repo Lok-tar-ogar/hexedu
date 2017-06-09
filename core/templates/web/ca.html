@@ -1,8 +1,7 @@
 {% extends 'inc/master.html' %}
 
 {% block title %}
-
-{% endblock %}
+    加拿大名校申请{% endblock %}
 
 {% block head %}
      <link href="../../static/css/jqvmap.css" media="screen" rel="stylesheet" type="text/css">
@@ -28,48 +27,29 @@
                 borderWidth: 1,
                 color: '#999999',
                 enableZoom: false,
-                hoverColor: '#c9dfaf',
+                hoverColor: '#8DCED4',
                 hoverOpacity: null,
                 normalizeFunction: 'linear',
                 scaleColors: ['#b6d6ff', '#005ace'],
-                selectedColor: '#c9dfaf',
+                selectedColor: '#8DCED4',
                 selectedRegions: null,
                 showTooltip: true,
-                colors: {
-                    us: '#C9DFAF',
-                    ca: '#C9DFAF',
-                    ru: '#C9DFAF'
-                },
+
                 onRegionClick: function(element, code, region)
                 {
-                    {#                        event.preventDefault();#}
+                                            event.preventDefault();
                     {#                    var message = 'You clicked "'#}
                     {#                        + region#}
                     {#                        + '" which has the code: '#}
                     {#                        + code.toUpperCase();#}
                     {##}
-                    alert(code);
+{#                    alert(code);#}
                     {#                    window.location.href='/';#}
 
                 },
                 onLabelShow: function(event, label, code)
                 {
-                    if (code == 'ca')
-                    {
-                        // Hide the label
-                        label.html('<div class="map-tooltip"><h1 class="header">Header</h1><p class="description">Canada</p></div>');
-{#                        event.preventDefault();#}
-                    }
-                    else if (code == 'ru')
-                    {
-                        // Plain TEXT labels
-                        label.text('Bears, vodka, balalaika');
-                    }
-                    else if (code == 'us')
-                    {
-                        // HTML Based Labels. You can use any HTML you want, this is just an example
-                        label.html('<div class="map-tooltip"><h1 class="header">Header</h1><p class="description">Some Description</p></div>');
-                    }
+
                 },
             });
 
@@ -79,5 +59,58 @@
 {% endblock %}
 
 {% block content %}
+    <div class="container text-center margin-bottom">
+        <h1 class="">
+            <i class="fa fa-globe fa-2x" style="color:#8DCED4;margin-right: 10px;"></i>
+            加拿大名校直通车
+        </h1>
+        <p class="normal-p"> 如果你有颗名校深造的心，却没有进得去TOP100的成绩，恒心就来带你体验弯道超车的快感</p>
+        <p><strong>（你也可以咨询我们获取更多的名校信息）</strong></p>
+    </div>
+
+    <div class="container text-center margin-bottom">
+        <a href="#">
+            <div class="col-sm-4">
+                <div class="hexoco-project-item " style="margin:30px auto; text-align:center">
+                    <img src="/static/images/mx/1.jpg" style="margin:auto auto 15px auto;" alt="四川恒心前途教育咨询-梅西百货" class="img-responsive">
+                    <div class="hexoco-text">
+                        <h2>英属哥伦比亚大学</h2>
+                        <p class="text-center normal-p">位于不列颠哥伦比亚省</p>
+{#                        <p class="text-center normal-p" style="padding: 5px 20px;">US NEWS RANK 2</p>#}
+                    </div>
+                </div>
+            </div>
+        </a>
+        <a href="#">
+            <div class="col-sm-4">
+                <div class="hexoco-project-item " style="margin:30px auto; text-align:center">
+                    <img src="/static/images/mx/2.jpg" style="margin:auto auto 15px auto;" alt="四川恒心前途教育咨询-梅西百货" class="img-responsive">
+                    <div class="hexoco-text">
+                        <h2>西蒙弗雷泽大学</h2>
+                         <p class="text-center normal-p">位于不列颠哥伦比亚省</p>
+                    </div>
+
+                </div>
+
+            </div>
+        </a>
+        <a href="#">
+            <div class="col-sm-4">
+                <div class="hexoco-project-item " style="margin:30px auto; text-align:center">
+                    <img src="/static/images/mx/3.jpg" style="margin:auto auto 15px auto;" alt="四川恒心前途教育咨询-梅西百货" class="img-responsive">
+                    <div class="hexoco-text">
+                        <h2>维多利亚大学</h2>
+                        <p class="text-center normal-p">位于不列颠哥伦比亚省</p>
+                    </div>
+                </div>
+            </div>
+        </a>
+    </div>
+    <div class="container text-center margin-bottom">
+        <h1 class="">
+            <i class="fa fa-globe fa-2x" style="color:#8DCED4;margin-right: 10px;"></i>
+            加拿大名校位置参考图
+        </h1>
+    </div>
     <div id="vmap" style="width: 80%;  margin:0 auto"></div>
 {% endblock %}

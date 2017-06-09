@@ -1,11 +1,76 @@
 {% extends 'inc/master.html' %}
 
 {% block title %}
-
-{% endblock %}
+美国名校申请{% endblock %}
 
 {% block head %}
-     <link href="../../static/css/jqvmap.css" media="screen" rel="stylesheet" type="text/css">
+    {#    <style>#}
+    {#      html, body {#}
+    {#        padding: 0;#}
+    {#        margin: 0;#}
+    {#        width: 100%;#}
+    {#        height: 100%;#}
+    {#      }#}
+    {#      #vmap {#}
+    {#        width: 100%;#}
+    {#        height: 100%;#}
+    {#        background-color: #333;#}
+    {#        -webkit-tap-highlight-color: rgba(0,0,0,0);#}
+    {#      }#}
+    {##}
+    {#      .jqvmap-region {#}
+    {#        cursor: default !important;#}
+    {#      }#}
+    {##}
+    {#      .map-pin {#}
+    {#        width: 64px;#}
+    {#        height: 50px;#}
+    {#        position: absolute;#}
+    {#        top: -25px;#}
+    {#        left: -32px;#}
+    {#        background-size: 32px 32px;#}
+    {#        background-repeat: no-repeat;#}
+    {#        text-align: center;#}
+    {#        background-position: top center;#}
+    {#        color: #888;#}
+    {#        font-weight: 500;#}
+    {#        font-size: 14px;#}
+    {#      }#}
+    {##}
+    {#      .map-pin span {#}
+    {#        position: absolute;#}
+    {#        bottom: 0;#}
+    {#        width: 100%;#}
+    {#        text-align: center;#}
+    {#        left: 0;#}
+    {#      }#}
+    {##}
+    {#      .red {#}
+    {#        background-image: url('../../static/images/marker/red.png');#}
+    {#      }#}
+    {##}
+    {#      .blue {#}
+    {#        background-image: url('../../static/images/marker/blue.png');#}
+    {#      }#}
+    {##}
+    {#      .purple {#}
+    {#        background-image: url('../../static/images/marker/purple.png');#}
+    {#      }#}
+    {##}
+    {#      /* Setup basic CSS for Label */#}
+    {#      .jqvmap-pin {#}
+    {#        font-family: "Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", Calibri, Helvetica, Arial, sans-serif;#}
+    {#        cursor: default;#}
+    {#      }#}
+    {##}
+    {#      /* Reposition Labels that are not quite right ( labels are centered in shape, and sometimes need tweaking ) */#}
+    {##}
+    {#      #jqvmap1_fl_pin {#}
+    {#        margin-left: 5%;#}
+    {#      }#}
+    {##}
+    {#    </style>#}
+    <link href="../../static/css/jqvmap.css" media="screen" rel="stylesheet" type="text/css">
     <script type="text/javascript" src="../../static/js/jquery.vmap.min.js"></script>
     <script type="text/javascript" src="../../static/js/map/jquery.vmap.usa.js" charset="utf-8"></script>
     <script>
@@ -18,33 +83,52 @@
         })
     </script>
     <script>
+        function escapeXml(string) {
+            return string.replace(/[<>]/g, function (c) {
+                switch (c) {
+                    case '<': return '\u003c';
+                    case '>': return '\u003e';
+                }
+            });
+        }
         jQuery(document).ready(function () {
+{#            var pins = {#}
+{#                ma: escapeXml('<div class="map-pin red"><span>哈佛大学</span></div>'),#}
+{#                ct: escapeXml('<div class="map-pin red"><span>耶鲁大学</span></div>'),#}
+{#                ca: escapeXml('<div class="map-pin red"><span>斯坦福大学、南加州大学、加州大学欧文分校</span></div>'),#}
+{##}
+{#                ny: escapeXml('<div class="map-pin red"><span>哥伦比亚大学</span></div>'),#}
+{#                pa: escapeXml('<div class="map-pin red"><span>宾夕法尼亚大学</span></div>'),#}
+{#                md: escapeXml('<div class="map-pin red"><span>约翰霍普金斯大学</span></div>'),#}
+{##}
+{#                ca: escapeXml('<div class="map-pin red"><span>南加州大学</span></div>'),#}
+{#                ct: escapeXml('<div class="map-pin red"><span>耶鲁大学</span></div>'),#}
+{#                co: escapeXml('<div class="map-pin red"><span>丹佛大学</span></div>'),#}
+{##}
+{#            };#}
             jQuery('#vmap').vectorMap({
                 map: 'usa_en',
-{#                pins: { "pk" : "pin_for_pk", "ru" : "pin_for_ru"},#}
-{#                pinMode: 'id',#}
+                pins: { "pk" : "pin_for_pk", "ru" : "pin_for_ru"},
+                pinMode: 'id',
                 backgroundColor: '#ffffff',
                 borderColor: '#818181',
                 borderOpacity: 0.25,
                 borderWidth: 1,
                 color: '#999999',
                 enableZoom: false,
-                hoverColor: '#c9dfaf',
+                hoverColor: '#8DCED4',
                 hoverOpacity: null,
                 normalizeFunction: 'linear',
                 scaleColors: ['#b6d6ff', '#005ace'],
-                selectedColor: '#c9dfaf',
+                selectedColor: '#8DCED4',
                 selectedRegions: null,
                 showTooltip: true,
-{#                colors: {#}
-{#                    us: '#C9DFAF',#}
-{#                    ca: '#C9DFAF',#}
-{#                    ru: '#C9DFAF'#}
-{#                },#}
+                {#                    pins:pins,#}
+
                 onRegionClick: function(element, code, region)
                 {
-                    {#                        event.preventDefault();#}
-                    alert(code);
+                    event.preventDefault();
+
 
                 },
                 onLabelShow: function(event, label, code)
@@ -59,5 +143,137 @@
 {% endblock %}
 
 {% block content %}
-    <div id="vmap" style="width: 80%;  margin:0 auto"></div>
+
+
+    <div class="container text-center margin-bottom">
+        <h1 class="">
+            <i class="fa fa-globe fa-2x" style="color:#8DCED4;margin-right: 10px;"></i>
+            美国名校直通车
+        </h1>
+        <p class="normal-p"> 如果你有颗名校深造的心，却没有进得去TOP100的成绩，恒心就来带你体验弯道超车的快感</p>
+        <p><strong>（你也可以咨询我们获取更多的名校信息）</strong></p>
+    </div>
+
+    <div class="container text-center margin-bottom">
+        <a href="#">
+            <div class="col-sm-4">
+                <div class="hexoco-project-item " style="margin:30px auto; text-align:center">
+                    <img src="/static/images/mx/1.jpg" style="margin:auto auto 15px auto;" alt="四川恒心前途教育咨询-梅西百货" class="img-responsive">
+                    <div class="hexoco-text">
+                        <h2>哈弗大学</h2>
+                        <p class="text-center normal-p">位于马萨诸塞州</p>
+                        <p class="text-center normal-p" style="padding: 5px 20px;">US NEWS RANK 2</p>
+                    </div>
+                </div>
+            </div>
+        </a>
+        <a href="#">
+            <div class="col-sm-4">
+                <div class="hexoco-project-item " style="margin:30px auto; text-align:center">
+                    <img src="/static/images/mx/2.jpg" style="margin:auto auto 15px auto;" alt="四川恒心前途教育咨询-梅西百货" class="img-responsive">
+                    <div class="hexoco-text">
+                        <h2>耶鲁大学</h2>
+                        <p class="text-center normal-p">位于康涅狄格州</p>
+                        <p class="text-center normal-p" style="padding: 5px 20px;">US NEWS RANK 3</p>
+                    </div>
+
+                </div>
+
+            </div>
+        </a>
+        <a href="#">
+            <div class="col-sm-4">
+                <div class="hexoco-project-item " style="margin:30px auto; text-align:center">
+                    <img src="/static/images/mx/3.jpg" style="margin:auto auto 15px auto;" alt="四川恒心前途教育咨询-梅西百货" class="img-responsive">
+                    <div class="hexoco-text">
+                        <h2>斯坦福大学</h2>
+                        <p class="text-center normal-p">位于加利福尼亚州</p>
+                        <p class="text-center normal-p" style="padding: 5px 20px;">US NEWS RANK 5</p>
+                    </div>
+                </div>
+            </div>
+        </a><a href="#">
+        <div class="col-sm-4">
+            <div class="hexoco-project-item">
+                <img src="/static/images/mx/4.jpg" style="margin:auto auto 15px auto;" alt="四川恒心前途教育咨询-CVS" class="img-responsive">
+                <div class="hexoco-text">
+                    <h2>哥伦比亚大学</h2>
+                    <p class="text-center normal-p">位于纽约</p>
+                    <p class="text-center normal-p" style="padding: 5px 20px;">US NEWS RANK 5</p>
+                </div>
+            </div>
+        </div>
+    </a> <a href="#">
+        <div class="col-sm-4">
+            <div class="hexoco-project-item">
+                <img src="/static/images/mx/5.jpg" style="margin:auto auto 15px auto;" alt="四川恒心前途教育咨询-美国电力" class="img-responsive">
+                <div class="hexoco-text">
+                    <h2>宾夕法尼亚大学</h2>
+                    <p class="text-center normal-p">位于宾夕法尼亚州</p>
+                    <p class="text-center normal-p" style="padding: 5px 20px;">US NEWS RANK 8</p>
+                </div>
+            </div>
+        </div>
+
+    </a> <a href="#">
+        <div class="col-sm-4">
+            <div class="hexoco-project-item">
+                <img src="/static/images/mx/6.jpg" style="margin:auto auto 15px auto;" alt="四川恒心前途教育咨询-美国留学" class="img-responsive">
+                <div class="hexoco-text">
+                    <h2>约翰霍普金斯大学</h2>
+                    <p class="text-center normal-p">位于马里兰州</p>
+                    <p class="text-center normal-p" style="padding: 5px 20px;">US NEWS RANK 10</p>
+                </div>
+            </div>
+        </div>
+    </a> <a href="#">
+        <div class="col-sm-4">
+            <div class="hexoco-project-item">
+                <img src="/static/images/mx/7.jpg" style="margin:auto auto 15px auto;" alt="四川恒心前途教育咨询-美国留学" class="img-responsive">
+                <div class="hexoco-text">
+                    <h2>南加州大学</h2>
+                    <p class="text-center normal-p">位于加利福尼亚州</p>
+                    <p class="text-center normal-p" style="padding: 5px 20px;">US NEWS RANK 23</p>
+                </div>
+            </div>
+        </div>
+    </a> <a href="#">
+        <div class="col-sm-4">
+            <div class="hexoco-project-item">
+                <img src="/static/images/mx/8.jpg" style="margin:auto auto 15px auto;" alt="四川恒心前途教育咨询-美国留学" class="img-responsive">
+                <div class="hexoco-text">
+                    <h2>加州大学欧文分校</h2>
+                    <p class="text-center normal-p">位于加利福尼亚州</p>
+                    <p class="text-center normal-p" style="padding: 5px 20px;">US NEWS RANK 39</p>
+                </div>
+            </div>
+        </div>
+    </a>   <a href="#">
+        <div class="col-sm-4">
+            <div class="hexoco-project-item">
+                <img src="/static/images/mx/9.jpg" style="margin:auto auto 15px auto;" alt="四川恒心前途教育咨询-美国留学" class="img-responsive">
+                <div class="hexoco-text">
+                    <h2>丹佛大学</h2>
+                    <p class="text-center normal-p">位于科罗拉多州</p>
+                    <p class="text-center normal-p" style="padding: 5px 20px;">US NEWS RANK 86</p>
+                </div>
+            </div>
+        </div>
+    </a>
+    </div>
+
+    {#    <div class="container text-center margin-bottom">#}
+    {#        <h1 class="">#}
+    {#            <img src="/static/images/aboutus/bg.png" class="margin-bottom" alt="学历学位认证-四川恒心前途教育咨询有限公司">#}
+    {#            美国名校分布#}
+    {#        </h1>#}
+    {#    </div>#}
+    <div class="container text-center margin-bottom">
+        <h1 class="">
+            <i class="fa fa-globe fa-2x" style="color:#8DCED4;margin-right: 10px;"></i>
+            美国名校地理位置参考图
+        </h1>
+    </div>
+    <div id="vmap" style="width: 90%;  margin:0 auto" class="margin-bottom">
+    </div>
 {% endblock %}

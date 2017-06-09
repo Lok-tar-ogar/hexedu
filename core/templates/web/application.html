@@ -1,17 +1,21 @@
 {% extends 'inc/master.html' %}
 
 {% block title %}
-    本研申请
-{% endblock %}
+    本研申请{% endblock %}
 
 {% block head %}
     <link href="../../static/css/jqvmap.css" media="screen" rel="stylesheet" type="text/css">
+    <style>
+        .fup{
+            animation:fadeInUp ease 2s both infinite;
+        }
+    </style>
     <script type="text/javascript" src="../../static/js/jquery.vmap.min.js"></script>
     <script type="text/javascript" src="../../static/js/map/jquery.vmap.world.js" charset="utf-8"></script>
     <script>
         $(function () {
             $('#apply').prop('class', 'active');
-            wheight = window.innerHeight - 172;
+            wheight = window.innerHeight - 172 - $("#summary0").height();
             $("#vmap").height(wheight);
         })
     </script>
@@ -19,57 +23,62 @@
         jQuery(document).ready(function () {
             jQuery('#vmap').vectorMap({
                 map: 'world_en',
-{#                pins: { "pk" : "pin_for_pk", "ru" : "pin_for_ru"},#}
-{#                pinMode: 'id',#}
+                {#                pins: { "pk" : "pin_for_pk", "ru" : "pin_for_ru"},#}
+                {#                pinMode: 'id',#}
                 backgroundColor: '#ffffff',
                 borderColor: '#818181',
                 borderOpacity: 0.25,
                 borderWidth: 1,
                 color: '#999999',
                 enableZoom: false,
-                hoverColor: '#c9dfaf',
+                hoverColor: '#8DCED4',
                 hoverOpacity: null,
                 normalizeFunction: 'linear',
-                scaleColors: ['#b6d6ff', '#005ace'],
-                selectedColor: '#c9dfaf',
+                {#                scaleColors: ['#b6d6ff', '#005ace'],#}
+                selectedColor: '#8DCED4',
                 selectedRegions: null,
                 showTooltip: true,
                 colors: {
-                    us: '#C9DFAF',
-                    ca: '#C9DFAF',
-                    ru: '#C9DFAF'
+                    us: '#8DCED4',
+                    ca: '#8DCED4',
+                    {#                    ru: '#C9DFAF'#}
                 },
                 onRegionClick: function(element, code, region)
                 {
-                    {#                        event.preventDefault();#}
+                    {#                    event.preventDefault();#}
                     {#                    var message = 'You clicked "'#}
                     {#                        + region#}
                     {#                        + '" which has the code: '#}
                     {#                        + code.toUpperCase();#}
                     {##}
-                    alert(code);
+                    {#                    alert(code);#}
                     {#                    window.location.href='/';#}
+                    if(code == 'us')
+                    {
+                        window.location.href='/usa'
+                    }
+                    else if(code == 'ca')
+                    {
+                        window.location.href='/ca'
+                    }
+                    else{
+                        event.preventDefault();
+                    }
 
                 },
-                onLabelShow: function(event, label, code)
-                {
-                    if (code == 'ca')
-                    {
-                        // Hide the label
-                        label.html('<div class="map-tooltip"><h1 class="header">Header</h1><p class="description">Canada</p></div>');
-{#                        event.preventDefault();#}
-                    }
-                    else if (code == 'ru')
-                    {
-                        // Plain TEXT labels
-                        label.text('Bears, vodka, balalaika');
-                    }
-                    else if (code == 'us')
-                    {
-                        // HTML Based Labels. You can use any HTML you want, this is just an example
-                        label.html('<div class="map-tooltip"><h1 class="header">Header</h1><p class="description">Some Description</p></div>');
-                    }
-                },
+                {#                onLabelShow: function(event, label, code)#}
+                {#                {#}
+                {#                    if (code == 'ca')#}
+                {#                    {#}
+                {#                        // Hide the label#}
+                {#                        label.html('<div class="map-tooltip"><h1 class="header"></h1><p class="description">Canada</p></div>');#}
+                {#                    }#}
+                {#                    else if (code == 'us')#}
+                {#                    {#}
+                {#                        // HTML Based Labels. You can use any HTML you want, this is just an example#}
+                {#                        label.html('<div class="map-tooltip"><h1 class="header">Header</h1><p class="description">USA</p></div>');#}
+                {#                    }#}
+                {#                },#}
             });
 
         });
@@ -78,9 +87,49 @@
 {% endblock %}
 
 {% block content %}
-    <div id="vmap" style="width: 80%;  margin:0 auto"></div>
-    <div style="display:none">
-        <img id="pin_for_pk" src="" />
-        <div id="pin_for_ru">!!!!.</div>
+    <div id="vmap" style="width: 90%;  margin:0 auto"></div>
+
+    <div class="container margin-bottom" id="summary0">
+        <div class="text-center">
+            {#            color:rgb(192, 48, 53)#}
+            <i class="fa fa-angle-double-up fa-3x fup" style="color:#8DCED4 "></i>
+        </div>
+        <p class="text-center" style="color:#8DCED4;"><strong>请点击上面带有颜色的国家 或 点击下面的图标了解留学详情</strong></p>
     </div>
+
+    <div class="container text-center margin-bottom">
+        <h1 class="">
+            <i class="fa fa-globe fa-2x" style="color:#8DCED4;margin-right: 10px;"></i>
+            名校直通车
+        </h1>
+        <p class="normal-p"> 如果你有颗名校深造的心，却没有进得去TOP100的成绩，恒心就来带你体验弯道超车的快感</p>
+    </div>
+
+    <section id="services">
+        <div class="container">
+            <div class="row">
+                <a href="/usa">
+                    <div class="col-sm-6 text-center padding wow fadeIn" data-wow-duration="1000ms" data-wow-delay="300ms">
+                        <div class="single-service">
+                            <div class="wow scaleIn" data-wow-duration="500ms" data-wow-delay="300ms">
+                                <img src="/static/images/usa.png" alt="">
+                            </div>
+
+                            <h2>美国</h2>
+                        </div>
+                    </div>
+                </a>
+                <a href="/ca">
+                    <div class="col-sm-6 text-center padding wow fadeIn" data-wow-duration="1000ms" data-wow-delay="600ms">
+                        <div class="single-service">
+                            <div class="wow scaleIn" data-wow-duration="500ms" data-wow-delay="600ms">
+                                <img src="/static/images/ca.png" alt="">
+                            </div>
+                            <h2>加拿大</h2>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
 {% endblock %}

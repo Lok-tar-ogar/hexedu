@@ -1,8 +1,7 @@
 {% extends 'inc/master.html' %}
 
 {% block title %}
-    四川恒心前途教育咨询有限公司
-{% endblock %}
+    四川恒心前途教育咨询有限公司{% endblock %}
 {% block head %}
     <link rel="stylesheet" href="/static/css/swiper.min.css">
     <style type="text/css">
@@ -11,33 +10,47 @@
     </style>
     <script src="/static/js/swiper.jquery.min.js"></script>
     <script src="/static/js/swiper.animate.min.js"></script>
-		<!-- 载入Swiper动画控制器初始化文件，与swiper.animate.js文件同时使用 -->
+    <!-- 载入Swiper动画控制器初始化文件，与swiper.animate.js文件同时使用 -->
     <script src="/static/js/swiper.animate.param.js"></script>
     <script>
         var myAC_main1 = new animateControl("slider-");
+
+        var system ={
+            win : false,
+            mac : false,
+            xll : false
+        };
+
         $(function () {
-            wheight = window.innerHeight - 172;
-            $("#indexSwiper").height(wheight);
-            $(".main-slider").height(wheight);
+            var p = navigator.platform;
+            system.win = p.indexOf("Win") == 0;
+            system.mac = p.indexOf("Mac") == 0;
+            system.x11 = (p == "X11") || (p.indexOf("Linux") == 0);
+            if(system.win||system.mac||system.xll){
+                wheight = window.innerHeight - 172;
+                $("#indexSwiper").height(wheight);
+                $(".main-slider").height(wheight);
+            }
+
             $('#home').prop('class', 'active');
         })
     </script>
 {% endblock %}
 {% block content %}
-    <div class="swiper-container" id="indexSwiper">
+    <div class="swiper-container" id="indexSwiper" >
         <div class="swiper-wrapper">
             <div class="swiper-slide" >
                 <section id="home-slider">
                     <div class="container">
                         <div class="row">
-                            <div class="main-slider">
+                            <div class="main-slider" >
                                 <div class="slider-text">
-                                    <h1>We Are Creative Nerds</h1>
-                                    <p>Boudin doner frankfurter pig. Cow shank bresaola pork loin tri-tip tongue venison pork belly meatloaf short loin landjaeger biltong beef ribs shankle chicken andouille.</p>
-                                    <a href="#" class="btn btn-common">SIGN UP</a>
+                                    <h1>恒心教育</h1>
+                                    <p class="normal-p">留学的一站式管家</p>
+                                    <p class="normal-p">HEX, YOUR TROUBLE TERMINATOR</p>
                                 </div>
                                 <img src="/static/images/home/slider/hill.png" class="slider-hill" alt="slider image">
-                                <img src="/static/images/home/slider/house.png" class="slider-house1" alt="slider image">
+                                <img src="/static/images/home/slider/house.png" class="slider-home" alt="slider image">
                                 <img src="/static/images/home/slider/sun.png" class="slider-sun" alt="slider image">
                                 <img src="/static/images/home/slider/birds1.png" class="slider-birds1" alt="slider image">
                                 <img src="/static/images/home/slider/birds2.png" class="slider-birds2" alt="slider image">
@@ -49,11 +62,11 @@
             <div class="swiper-slide">
                 <section id="home-slider">
                     <div class="container">
-                        <div class="main-slider">
+                        <div class="main-slider" >
                             <div class="slider-text">
-                                <h1>We Are Creative Nerds</h1>
-                                <p>Boudin doner frankfurter pig. Cow shank bresaola pork loin tri-tip tongue venison pork belly meatloaf short loin landjaeger biltong beef ribs shankle chicken andouille.</p>
-                                <a href="#" class="btn btn-common">SIGN UP</a>
+                                <h1>恒心教育</h1>
+                                <p class="normal-p">如果你有课出国深造留学的心，却没有进得去top100标化或非标化成绩</p>
+                                <p class="normal-p">恒心来带你体验弯道超车的快感</p>
                             </div>
                             <img src="/static/images/home/slider/slide1/house.png" class="img-responsive slider-house" alt="slider image">
                             <img src="/static/images/home/slider/slide1/circle1.png" class="slider-circle1" alt="slider image">
@@ -82,9 +95,9 @@
             onInit: function(swiper){
                 myAC_main1.init(swiperAnimateParam_main, swiper);
                 myAC_main1.play(); // 如果页面中未使用Loading效果，则必须取消本行代码的注释，以开启myAC_main1主动画控制器中动画的播放
-				},
-				onSlideChangeEnd: function(swiper){
-					myAC_main1.play();
+            },
+            onSlideChangeEnd: function(swiper){
+                myAC_main1.play();
             }
         })
     </script>
@@ -109,60 +122,60 @@
     {#    </section>#}
     <!--/#home-slider-->
 
-{#    <section id="services">#}
-{#        <div class="container">#}
-{#            <div class="row">#}
-{#                <div class="col-sm-4 text-center padding wow fadeIn" data-wow-duration="1000ms" data-wow-delay="300ms">#}
-{#                    <div class="single-service">#}
-{#                        <div class="wow scaleIn" data-wow-duration="500ms" data-wow-delay="300ms">#}
-{#                            <img src="/static/images/home/icon1.png" alt="">#}
-{#                        </div>#}
-{#                        <h2>云计算+大数据</h2>#}
-{#                        <p>海量学校与客户资源匹配，找到最适合你的解决路径</p>#}
-{#                    </div>#}
-{#                </div>#}
-{#                <div class="col-sm-4 text-center padding wow fadeIn" data-wow-duration="1000ms" data-wow-delay="600ms">#}
-{#                    <div class="single-service">#}
-{#                        <div class="wow scaleIn" data-wow-duration="500ms" data-wow-delay="600ms">#}
-{#                            <img src="/static/images/home/icon2.png" alt="">#}
-{#                        </div>#}
-{#                        <h2>用户中心进度查询</h2>#}
-{#                        <p>用户中心进度查询，随时随地了解项目进度，让你的等待变得省时又安心。</p>#}
-{#                    </div>#}
-{#                </div>#}
-{#                <div class="col-sm-4 text-center padding wow fadeIn" data-wow-duration="1000ms" data-wow-delay="900ms">#}
-{#                    <div class="single-service">#}
-{#                        <div class="wow scaleIn" data-wow-duration="500ms" data-wow-delay="900ms">#}
-{#                            <img src="/static/images/home/icon3.png" alt="">#}
-{#                        </div>#}
-{#                        <h2>Swift Page Builder</h2>#}
-{#                        <p>Venison tongue, salami corned beef ball tip meatloaf bacon. Fatback pork belly bresaola tenderloin bone pork kevin shankle.</p>#}
-{#                    </div>#}
-{#                </div>#}
-{#            </div>#}
-{#        </div>#}
-{#    </section>#}
-{#    <!--/#services-->#}
-{##}
-{#    <section id="action" class="responsive">#}
-{#        <div class="vertical-center">#}
-{#            <div class="container">#}
-{#                <div class="row">#}
-{#                    <div class="action take-tour">#}
-{#                        <div class="col-sm-7 wow fadeInLeft" data-wow-duration="500ms" data-wow-delay="300ms">#}
-{#                            <h1 class="title">Triangle Corporate Template</h1>#}
-{#                            <p>A responsive, retina-ready &amp; wide multipurpose template.</p>#}
-{#                        </div>#}
-{#                        <div class="col-sm-5 text-center wow fadeInRight" data-wow-duration="500ms" data-wow-delay="300ms">#}
-{#                            <div class="tour-button">#}
-{#                                <a href="#" class="btn btn-common">TAKE THE TOUR</a>#}
-{#                            </div>#}
-{#                        </div>#}
-{#                    </div>#}
-{#                </div>#}
-{#            </div>#}
-{#        </div>#}
-{#    </section>#}
+    {#    <section id="services">#}
+    {#        <div class="container">#}
+    {#            <div class="row">#}
+    {#                <div class="col-sm-4 text-center padding wow fadeIn" data-wow-duration="1000ms" data-wow-delay="300ms">#}
+    {#                    <div class="single-service">#}
+    {#                        <div class="wow scaleIn" data-wow-duration="500ms" data-wow-delay="300ms">#}
+    {#                            <img src="/static/images/home/icon1.png" alt="">#}
+    {#                        </div>#}
+    {#                        <h2>云计算+大数据</h2>#}
+    {#                        <p>海量学校与客户资源匹配，找到最适合你的解决路径</p>#}
+    {#                    </div>#}
+    {#                </div>#}
+    {#                <div class="col-sm-4 text-center padding wow fadeIn" data-wow-duration="1000ms" data-wow-delay="600ms">#}
+    {#                    <div class="single-service">#}
+    {#                        <div class="wow scaleIn" data-wow-duration="500ms" data-wow-delay="600ms">#}
+    {#                            <img src="/static/images/home/icon2.png" alt="">#}
+    {#                        </div>#}
+    {#                        <h2>用户中心进度查询</h2>#}
+    {#                        <p>用户中心进度查询，随时随地了解项目进度，让你的等待变得省时又安心。</p>#}
+    {#                    </div>#}
+    {#                </div>#}
+    {#                <div class="col-sm-4 text-center padding wow fadeIn" data-wow-duration="1000ms" data-wow-delay="900ms">#}
+    {#                    <div class="single-service">#}
+    {#                        <div class="wow scaleIn" data-wow-duration="500ms" data-wow-delay="900ms">#}
+    {#                            <img src="/static/images/home/icon3.png" alt="">#}
+    {#                        </div>#}
+    {#                        <h2>Swift Page Builder</h2>#}
+    {#                        <p>Venison tongue, salami corned beef ball tip meatloaf bacon. Fatback pork belly bresaola tenderloin bone pork kevin shankle.</p>#}
+    {#                    </div>#}
+    {#                </div>#}
+    {#            </div>#}
+    {#        </div>#}
+    {#    </section>#}
+    {#    <!--/#services-->#}
+    {##}
+    {#    <section id="action" class="responsive">#}
+    {#        <div class="vertical-center">#}
+    {#            <div class="container">#}
+    {#                <div class="row">#}
+    {#                    <div class="action take-tour">#}
+    {#                        <div class="col-sm-7 wow fadeInLeft" data-wow-duration="500ms" data-wow-delay="300ms">#}
+    {#                            <h1 class="title">Triangle Corporate Template</h1>#}
+    {#                            <p>A responsive, retina-ready &amp; wide multipurpose template.</p>#}
+    {#                        </div>#}
+    {#                        <div class="col-sm-5 text-center wow fadeInRight" data-wow-duration="500ms" data-wow-delay="300ms">#}
+    {#                            <div class="tour-button">#}
+    {#                                <a href="#" class="btn btn-common">TAKE THE TOUR</a>#}
+    {#                            </div>#}
+    {#                        </div>#}
+    {#                    </div>#}
+    {#                </div>#}
+    {#            </div>#}
+    {#        </div>#}
+    {#    </section>#}
     <!--/#action-->
 
     <section id="features">
@@ -170,29 +183,44 @@
             <div class="row">
                 <div class="single-features">
                     <div class="col-sm-5 wow fadeInLeft" data-wow-duration="500ms" data-wow-delay="300ms">
-                        <img src="/static/images/index/image1.png" class="img-responsive" alt="">
+                        <img src="/static/images/index/大数据.png" class="img-responsive" alt="">
                     </div>
                     <div class="col-sm-6 wow fadeInRight" data-wow-duration="500ms" data-wow-delay="300ms">
-                        <h2>Experienced and Enthusiastic</h2>
-                        <P>Pork belly leberkas cow short ribs capicola pork loin. Doner fatback frankfurter jerky meatball pastrami bacon tail sausage. Turkey fatback ball tip, tri-tip tenderloin drumstick salami strip steak.</P>
+                        <h2>云计算+大数据库</h2>
+                        <P class="normal-p"><i class="fa fa-angle-right" style="color:#C03035;margin-right: 15px;"></i>海量学校与客户资源匹配，找到最适合你的解决路径</P>
+                        <P class="normal-p"><i class="fa fa-angle-right" style="color:#C03035;margin-right: 15px;"></i>定期向国内外一流招聘平台输送人才</P>
+
                     </div>
                 </div>
                 <div class="single-features">
                     <div class="col-sm-6 col-sm-offset-1 align-right wow fadeInLeft" data-wow-duration="500ms" data-wow-delay="300ms">
-                        <h2>Built for the Responsive Web</h2>
-                        <P>Mollit eiusmod id chuck turducken laboris meatloaf pork loin tenderloin swine. Pancetta excepteur fugiat strip steak tri-tip. Swine salami eiusmod sint, ex id venison non. Fugiat ea jowl cillum meatloaf.</P>
+                        <h2>名校直通</h2>
+                        <P class="normal-p"><i class="fa fa-angle-right" style="color:#C03035;margin-right: 15px;"></i>
+                            TOP100名校轻松保进，遇对了人，拿OFFER也可以像拿快递一样简单。
+                        </P>
                     </div>
                     <div class="col-sm-5 wow fadeInRight" data-wow-duration="500ms" data-wow-delay="300ms">
-                        <img src="/static/images/index/image2.png" class="img-responsive" alt="">
+                        <img src="/static/images/index/image3.png" class="img-responsive" alt="">
                     </div>
                 </div>
                 <div class="single-features">
                     <div class="col-sm-5 wow fadeInLeft" data-wow-duration="500ms" data-wow-delay="300ms">
-                        <img src="/static/images/index/image3.png" class="img-responsive" alt="">
+                        <img src="/static/images/index/进度查询.png" class="img-responsive" alt="">
                     </div>
                     <div class="col-sm-6 wow fadeInRight" data-wow-duration="500ms" data-wow-delay="300ms">
-                        <h2>Experienced and Enthusiastic</h2>
-                        <P>Ut officia cupidatat anim excepteur fugiat cillum ea occaecat rump pork chop tempor. Ut tenderloin veniam commodo. Shankle aliquip short ribs, chicken eiusmod exercitation shank landjaeger spare ribs corned beef.</P>
+                        <h2>用户中心</h2>
+                        <P class="normal-p"><i class="fa fa-angle-right" style="color:#C03035;margin-right: 15px;"></i>
+                            突出强大功能的极简页面，让你的需求变得一目了然
+                        </P>
+                        <P class="normal-p"><i class="fa fa-angle-right" style="color:#C03035;margin-right: 15px;"></i>
+                            实时进度查询，让每一步都在你的掌控之中
+                        </P>
+                        <P class="normal-p"><i class="fa fa-angle-right" style="color:#C03035;margin-right: 15px;"></i>
+                            带领新会员入门，还将有巨大惊喜与福利相赠
+                        </P>
+                        <P class="normal-p"><i class="fa fa-angle-right" style="color:#C03035;margin-right: 15px;"></i>
+                            会员福利多多，恒心微管家让你免费享受黑卡持有者般的高配生活礼遇
+                        </P>
                     </div>
                 </div>
             </div>
@@ -201,7 +229,7 @@
     <!--/#features-->
     <section id="action">
         <div class="vertical-center">
-             <div class="container">
+            <div class="container">
                 <div class="row">
                     <div class="action count">
                         <div class="col-sm-3 text-center wow bounceIn" data-wow-duration="1000ms" data-wow-delay="300ms">
@@ -224,37 +252,81 @@
                 </div>
             </div>
         </div>
-   </section>
+    </section>
 
-    <section id="clients">
-        <div class="container">
+    <section >
+        <div class="container margin-bottom">
             <div class="row">
                 <div class="col-sm-12">
                     <div class="clients text-center wow fadeInUp" data-wow-duration="500ms" data-wow-delay="300ms">
                         <p><img src="/static/images/home/clients.png" class="img-responsive" alt=""></p>
-                        <h1 class="title">Happy Clients</h1>
-                        <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <br> Ut enim ad minim veniam, quis nostrud </p>
+                        <h1 class="title">四川恒心前途教育咨询有限公司</h1>
+                        {#                        <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <br> Ut enim ad minim veniam, quis nostrud </p>#}
                     </div>
-                    <div class="clients-logo wow fadeIn" data-wow-duration="1000ms" data-wow-delay="600ms">
-                        <div class="col-xs-3 col-sm-2">
-                            <a href="#"><img src="/static/images/home/client1.png" class="img-responsive" alt=""></a>
-                        </div>
-                        <div class="col-xs-3 col-sm-2">
-                            <a href="#"><img src="/static/images/home/client2.png" class="img-responsive" alt=""></a>
-                        </div>
-                        <div class="col-xs-3 col-sm-2">
-                            <a href="#"><img src="/static/images/home/client3.png" class="img-responsive" alt=""></a>
-                        </div>
-                        <div class="col-xs-3 col-sm-2">
-                            <a href="#"><img src="/static/images/home/client4.png" class="img-responsive" alt=""></a>
-                        </div>
-                        <div class="col-xs-3 col-sm-2">
-                            <a href="#"><img src="/static/images/home/client5.png" class="img-responsive" alt=""></a>
-                        </div>
-                        <div class="col-xs-3 col-sm-2">
-                            <a href="#"><img src="/static/images/home/client6.png" class="img-responsive" alt=""></a>
-                        </div>
-                    </div>
+{#                    <section id="portfolio" style="margin-top: -50px;">#}
+{#                        <div class="container">#}
+{#                            <div class="row">#}
+{#                                <ul class="portfolio-filter text-center">#}
+{#                                    <li><a class="btn btn-default active" href="#" data-filter="*">All</a></li>#}
+{#                                    <li><a class="btn btn-default" href="#" data-filter=".branded">学历学位认证</a></li>#}
+{#                                    <li><a class="btn btn-default" href="#" data-filter=".design">名校申请</a></li>#}
+{#                                </ul><!--/#portfolio-filter-->#}
+{##}
+{#                                <div class="portfolio-items">#}
+{#                                    <div class="col-xs-6 col-sm-4 col-md-3 portfolio-item branded logos">#}
+{#                                        <div class="portfolio-wrapper">#}
+{#                                            <div class="portfolio-single">#}
+{#                                                <div class="portfolio-thumb">#}
+{#                                                    <img src="/static/images/sample/01.jpg" class="img-responsive" alt="" style="height:300px;">#}
+{#                                                </div>#}
+{#                                            </div>#}
+{#                                        </div>#}
+{##}
+{#                                    </div>#}
+{#                                    <div class="col-xs-6 col-sm-4 col-md-3 portfolio-item branded logos">#}
+{#                                        <div class="portfolio-wrapper">#}
+{#                                            <div class="portfolio-single">#}
+{#                                                <div class="portfolio-thumb">#}
+{#                                                    <img src="/static/images/sample/02.jpg" class="img-responsive" alt="" style="height:300px;">#}
+{#                                                </div>#}
+{##}
+{#                                            </div>#}
+{#                                        </div>#}
+{##}
+{#                                    </div>#}
+{#                                    <div class="col-xs-6 col-sm-4 col-md-3 portfolio-item branded folio">#}
+{#                                        <div class="portfolio-wrapper">#}
+{#                                            <div class="portfolio-single">#}
+{#                                                <div class="portfolio-thumb">#}
+{#                                                    <img src="/static/images/sample/03.jpg" class="img-responsive" alt="" style="height:300px;">#}
+{#                                                </div>#}
+{#                                            </div>#}
+{#                                        </div>#}
+{#                                    </div>#}
+{#                                    <div class="col-xs-6 col-sm-4 col-md-3 portfolio-item design logos">#}
+{#                                        <div class="portfolio-wrapper">#}
+{#                                            <div class="portfolio-single">#}
+{#                                                <div class="portfolio-thumb">#}
+{#                                                    <img src="/static/images/sample/1.jpg" class="img-responsive" alt="">#}
+{#                                                </div>#}
+{#                                            </div>#}
+{#                                        </div>#}
+{#                                    </div>#}
+{##}
+{#                                    <div class="col-xs-6 col-sm-4 col-md-3 portfolio-item design logos">#}
+{#                                        <div class="portfolio-wrapper">#}
+{#                                            <div class="portfolio-single">#}
+{#                                                <div class="portfolio-thumb">#}
+{#                                                    <img src="/static/images/sample/2.jpg" class="img-responsive" alt="">#}
+{#                                                </div>#}
+{#                                            </div>#}
+{#                                        </div>#}
+{#                                    </div>#}
+{#                                </div>#}
+{##}
+{#                            </div>#}
+{#                        </div>#}
+{#                    </section>#}
                 </div>
             </div>
         </div>
@@ -263,6 +335,6 @@
 {% endblock %}
 
 {% block footer %}
-
+    <script type="text/javascript" src="../../static/js/jquery.isotope.min.js"></script>
 
 {% endblock %}
