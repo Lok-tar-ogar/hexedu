@@ -192,6 +192,78 @@ def upenn(req):
     return render(req,'web/usa/Pennsylvania.html',locals())
 
 
+def CA(req):
+    '''
+    南加州大学
+    '''
+    return render(req,'web/usa/CA.html',locals())
+
+
+def Columbia(req):
+    '''
+    哥伦比亚大学
+    '''
+    return render(req,'web/usa/Columbia.html',locals())
+
+
+def Denver(req):
+    '''
+    丹佛大学
+    '''
+    return render(req,'web/usa/Denver.html',locals())
+
+
+def Harvard(req):
+    '''
+    哈佛大学
+    '''
+    return render(req,'web/usa/Harvard.html',locals())
+
+
+def Haven(req):
+    '''
+    yelu大学
+    '''
+    return render(req,'web/usa/Haven.html',locals())
+
+
+def Irvine(req):
+    '''
+    欧文大学
+    '''
+    return render(req,'web/usa/Irvine.html',locals())
+
+
+def Stanford(req):
+    '''
+    欧文大学
+    '''
+    return render(req,'web/usa/Stanford.html',locals())
+
+def Baltimore(req):
+    '''
+    欧文大学
+    '''
+    return render(req,'web/usa/Baltimore.html',locals())
+
+def Burnaby(req):
+    '''
+    西蒙弗雷泽大学
+    '''
+    return render(req,'web/ca/Burnaby.html',locals())
+
+def CAColumbia(req):
+    '''
+    英属哥伦比亚大学
+    '''
+    return render(req,'web/ca/CAColumbia.html',locals())
+
+def Victoria(req):
+    '''
+    维多利亚大学
+    '''
+    return render(req,'web/ca/Victoria.html',locals())
+
 @csrf_exempt
 def message(req):
     '''

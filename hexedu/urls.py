@@ -58,6 +58,18 @@ urlpatterns = [
 
     url(r'^message$', views.message),
 
-    # url(r'^Pennsylvania$', views.upenn),
-    # url(r'^Denver', views.Denver),
+    url(r'^Pennsylvania$', views.upenn),
+    url(r'^Denver$', views.Denver),
+    url(r'^CA$', views.CA),
+    url(r'^Columbia$', views.Columbia),
+    url(r'^Harvard$', views.Harvard),
+    url(r'^Haven$', views.Haven),
+    url(r'^Irvine$', views.Irvine),
+    url(r'^Stanford$', views.Stanford),
+    url(r'^Baltimore$', views.Baltimore),
+
+    url(r'^CAColumbia$', views.CAColumbia),
+    url(r'^Burnaby$', views.Burnaby),
+    url(r'^Victoria$', views.Victoria)
+
 ]
