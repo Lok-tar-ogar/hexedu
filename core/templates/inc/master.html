@@ -7,6 +7,8 @@
     <meta name="keywords" content="">
     <meta name="author" content="dawsonrose,Arnold0824">
     <title>{% block title %}{% endblock %}-留学群体一站式服务机构</title>
+    <meta name="description" content="恒心教育，留学群体的一站式管家。致力于向留学生群体提供从海外名校保进、课业辅导、学位认证到移民落户、职业规划、生活辅助的一站式服务。"/>
+    <meta name="keywords" content="学历学位认证 生活辅助 名校直通 海外留学 留学 名校保进 移民落户 落户 职业规划 快速本科 游学 夏令营 冬令营" />
     <link href="/static/css/bootstrap.min.css" rel="stylesheet">
     <link href="/static/css/font-awesome.min.css" rel="stylesheet">
     <link href="/static/css/animate.min.css" rel="stylesheet">
@@ -14,6 +16,35 @@
     <link href="/static/css/main.css" rel="stylesheet">
     <link href="/static/css/responsive.css" rel="stylesheet">
     <script type="text/javascript" src="/static/js/jquery.js"></script>
+    <script type="text/javascript">
+        function browserRedirect() {
+            var sUserAgent = navigator.userAgent.toLowerCase();
+            /*	var bIsIpad = sUserAgent.match(/ipad/i) == "ipad";*/
+            var bIsIphoneOs = sUserAgent.match(/iphone os/i) == "iphone os";
+            var bIsMidp = sUserAgent.match(/midp/i) == "midp";
+            var bIsUc7 = sUserAgent.match(/rv:1.2.3.4/i) == "rv:1.2.3.4";
+            var bIsUc = sUserAgent.match(/ucweb/i) == "ucweb";
+            var bIsAndroid = sUserAgent.match(/android/i) == "android";
+            var bIsCE = sUserAgent.match(/windows ce/i) == "windows ce";
+            var bIsWM = sUserAgent.match(/windows mobile/i) == "windows mobile";
+            if ( bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE || bIsWM) {
+//移动端地址
+                if(top.location.hostname != "m.hexedu.com") {
+                    window.location.href = "http://m.hexedu.com";
+                }
+            }
+        }
+        browserRedirect();
+    </script>
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?0e8c5bc1f347a934cd79d6cb67187a08";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
     {% block head %}
 
     {% endblock %}
@@ -111,9 +142,9 @@
                     {#                        </li>#}
                     <li id="tour" ><a href="/tour">游学之旅</a>
                     </li>
-{#                    <li id="info">#}
-{#                        <a href="/information">资讯中心</a>#}
-{#                    </li>#}
+                    {#                    <li id="info">#}
+                    {#                        <a href="/information">资讯中心</a>#}
+                    {#                    </li>#}
                     <li class="dropdown" id="about"><a href="/about">关于我们<i class="fa fa-angle-down"></i></a>
                         <ul role="menu" class="sub-menu">
                             {#                            <li><a href="/elite" id="elite">恒心精英计划</a></li>#}
@@ -245,27 +276,42 @@
              */
             processData: false,
             url: '/message',
-{#            beforeSend: function(){#}
-{#                form.prepend( form_status.html('<p><i class="fa fa-spinner fa-spin"></i> message is sending...</p>').fadeIn() );#}
-{#            },#}
+            {#            beforeSend: function(){#}
+            {#                form.prepend( form_status.html('<p><i class="fa fa-spinner fa-spin"></i> message is sending...</p>').fadeIn() );#}
+            {#            },#}
             success: function (data) {
                 data=JSON.parse(data);
                 if (data.status == "200") {
-{#                    alert("success");#}
+                    {#                    alert("success");#}
                     form_status.html('<p class="text-success">谢谢您联系我们，我们会尽可能在24小时内联系您。</p>').delay(4000).fadeOut();
                 }
                 if (data.status == "500") {
-{#                    alert("error");#}
+                    {#                    alert("error");#}
                     form_status.html('<p class="text-warning">出错了，请您留下您正确的联系方式。</p>').delay(4000).fadeOut();
                 }
             },
             error: function () {
-{#                alert("留言发送失败！");#}
+                {#                alert("留言发送失败！");#}
                 form_status.html('<p class="text-warning">出错了，请您留下您正确的联系方式。</p>').delay(4000).fadeOut();
             }
         });
 
     }
+</script>
+
+<script>
+    (function(){
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        }
+        else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
 </script>
 <div class="gototop js-top">
     <a href="#" class="js-gotop"><i class="fa fa-angle-double-up"></i></a>
@@ -278,5 +324,6 @@
 <script type="text/javascript" src="/static/js/main.js"></script>
 {% block footer %}
 {% endblock %}
+<script type="text/javascript"> var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://"); document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F0e8c5bc1f347a934cd79d6cb67187a08' type='text/javascript'%3E%3C/script%3E")) </script>
 </body>
 </html>
