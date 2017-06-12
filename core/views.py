@@ -1,6 +1,8 @@
 from django.shortcuts import render
-
-
+import json
+from core.models import *
+from django.http import HttpResponse, HttpResponseRedirect
+from django.views.decorators.csrf import csrf_exempt, csrf_protect
 
 def index(req):
     '''
@@ -182,3 +184,42 @@ def app_detail(req):
     '''
     return render(req, "web/apply_detail.html", locals())
 
+
+def upenn(req):
+    '''
+    宾夕法尼亚大学
+    '''
+    return render(req,'web/usa/Pennsylvania.html',locals())
+
+
+@csrf_exempt
+def message(req):
+    '''
+    留言信息
+    '''
+    try:
+        r = req.POST
+        name = r.get("name")
+        tel = r.get("tel", None)
+        email = r.get("email", None)
+        m = r.get("message", None)
+
+        data = {}
+        if name or tel or email or m:
+            mess = Message()
+            mess.name = name
+            mess.tel = tel
+            mess.email = email
+            mess.message = m
+            mess.save()
+            data["status"] = "200"
+
+            return HttpResponse(json.dumps(data, ensure_ascii=False))
+        else:
+            data["status"] = "500"
+            return HttpResponse(json.dumps(data, ensure_ascii=False))
+
+    except:
+        data = {}
+        data["status"] = "500"
+        return HttpResponse(json.dumps(data, ensure_ascii=False), content_type="application/json")

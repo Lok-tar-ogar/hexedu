@@ -43,17 +43,21 @@ urlpatterns = [
     url(r'^usa$', views.usa),
     url(r'^ca$', views.ca),
     url(r'^europe$', views.europe),
-    url(r'^asia', views.asia),
+    url(r'^asia$', views.asia),
 
-    url(r'^profession', views.profession),
-    url(r'^about', views.about),
-    url(r'^cooperate', views.cooperate),
-    url(r'^elite', views.elite),
-    url(r'^contact', views.contact),
-    url(r'^develop', views.develop),
+    url(r'^profession$', views.profession),
+    url(r'^about$', views.about),
+    url(r'^cooperate$', views.cooperate),
+    url(r'^elite$', views.elite),
+    url(r'^contact$', views.contact),
+    url(r'^develop$', views.develop),
 
-    url(r'^car', views.car),
-    url(r'^housekeep', views.housekeep),
-    url(r'^settle', views.settle),
+    url(r'^car$', views.car),
+    url(r'^housekeep$', views.housekeep),
+    url(r'^settle$', views.settle),
 
+    url(r'^message$', views.message),
+
+    # url(r'^Pennsylvania$', views.upenn),
+    # url(r'^Denver', views.Denver),
 ]
