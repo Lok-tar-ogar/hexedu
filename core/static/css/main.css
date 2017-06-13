@@ -2880,7 +2880,7 @@ span.stButton_gradient,
   right: 20px;
   z-index: 999;
   opacity: 1;
-  visibility: visible;
+  visibility: hidden;
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s;
@@ -2896,6 +2896,12 @@ span.stButton_gradient,
   word-wrap:break-word;
   box-shadow: 0 5px 10px rgba(0,0,0,0.3);
   padding:5px 5px;
+}
+
+@media only screen and (min-width : 768px) {
+  .pcinfo{
+    visibility: visible;
+  }
 }
 
 .pcinfo .icon {
