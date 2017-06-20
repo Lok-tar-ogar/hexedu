@@ -9,6 +9,7 @@ class Message(models.Model):
     email = models.CharField('电子邮箱', max_length=100, null=True, blank=True)
     tel = models.CharField('电话', max_length=50, null=True, blank=True)
     message = models.TextField('留言', max_length=1000, null=True, blank=True)
+    date = models.DateTimeField('创建日期',auto_now_add=True)
 
     class Meta:
         verbose_name = "留言信息"
