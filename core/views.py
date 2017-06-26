@@ -3,6 +3,7 @@ import json
 from core.models import *
 from django.http import HttpResponse, HttpResponseRedirect
 from django.views.decorators.csrf import csrf_exempt, csrf_protect
+from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
 def index(req):
     '''
@@ -22,13 +23,70 @@ def information(req):
     '''
     资讯中心
     '''
+    tag = 'all'
+    cat = 'all'
+    tag = req.GET.get("tag", "all")
+    cat = req.GET.get("cate", "all")
+    news = News.objects.all()
+    if tag == 'all' or '':
+        pass
+    else:
+        news = news.filter(tag__name=tag)
+
+    if cat == "all" or '':
+        pass
+    else:
+        news = news.filter(cat__name=cat)
+
+    new = News.objects.all().count()
+    cate = Category.objects.all()
+    t = Tag.objects.all()
+
+    paginator = Paginator(news, 6)
+    page = req.GET.get('page', 1)
+    try:
+        paged = paginator.page(page)
+        pagenum = paginator.num_pages
+        page = int(page)
+
+        if 1 <= pagenum <= 5:
+            rangedpages = paginator.page_range
+
+        else:
+            rangedpages = [page - 2 if page - 2 > 1 else 1, page - 1 if page > 2 else 1, page, page + 1, page + 2,
+                           page + 3,
+                           page + 4]
+        rangedpages = list(set(rangedpages))
+
+    except Exception as e:
+        page = 1
+        pagenum = paginator.num_pages
+        if pagenum == 0:
+            lastpagenum = []
+
+        elif 1 <= pagenum <= 5:
+            paged = paginator.page(1)
+            rangedpages = paginator.page_range
+        else:
+            paged = paginator.page(1)
+            lastpagenum = paginator.num_pages
+            rangedpages = [1, 2, 3, 4, 5]
     return render(req, "web/information.html", locals())
 
 
-def information_detail(req):
+def information_detail(req, fid):
     '''
     资讯详情
     '''
+    tag = 'all'
+    cat = 'all'
+    tag = req.GET.get("tag", "all")
+    cat = req.GET.get("cate", "all")
+
+    count = News.objects.all().count()
+    cate = Category.objects.all()
+    t = Tag.objects.all()
+    new = News.objects.get(id=fid)
     return render(req, "web/information_detail.html", locals())
 
 

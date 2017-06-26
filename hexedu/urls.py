@@ -25,7 +25,7 @@ urlpatterns = [
     url(r'^detail$', views.app_detail),
 
     url(r'^information$', views.information),
-    url(r'^information/1$', views.information_detail),
+    url(r'^information/(?P<fid>\d+)$', views.information_detail),
     url(r'^guidance$', views.guidance),
     url(r'^tour$', views.tour),
     url(r'^certification$', views.certification),

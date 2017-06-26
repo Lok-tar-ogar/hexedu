@@ -1301,8 +1301,8 @@ ul.elements li > i{
   border-radius: 5px;
   border: 1px solid #fff;
 }
-
-.pagination li:first-child a{
+/*.pagination li:first-child a{*/
+.pagination .first a{
   background: url(../images/portfolio/left.png);
   background-repeat: no-repeat;
   text-indent: -999999999px;
@@ -1316,7 +1316,7 @@ ul.elements li > i{
   transition: 300ms;
 }
 
-.pagination li:first-child a:hover{
+.pagination .first a:hover{
   background: url(../images/portfolio/left.png);
   background-position: center top -37px;
   background-repeat: no-repeat;
@@ -1325,8 +1325,8 @@ ul.elements li > i{
   -o-transition: 300ms;
   transition: 300ms;
 }
-
-.pagination li:last-child a{
+/*.pagination li:last-child a{*/
+.pagination .last a{
   background: url(../images/portfolio/right.png);
   background-repeat: no-repeat;
   text-indent: -999999999px;
@@ -1340,7 +1340,7 @@ ul.elements li > i{
   transition: 300ms;
 }
 
-.pagination li:last-child a:hover{
+.pagination .last a:hover{
   background: url(../images/portfolio/right.png);
   background-position: center top -37px;
   background-repeat: no-repeat;
@@ -3585,4 +3585,9 @@ p{
   width: 15px;
   display: none\0/;
   _display: none;
+}
+
+.post-content img{
+  max-width: 100%;
+  height:auto;
 }
