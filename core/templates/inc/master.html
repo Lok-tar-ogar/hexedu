@@ -288,16 +288,15 @@
             success: function (data) {
                 data=JSON.parse(data);
                 if (data.status == "200") {
-                    {#                    alert("success");#}
-                    form_status.html('<p class="text-success">谢谢您联系我们，我们会尽可能在24小时内联系您。</p>').delay(4000).fadeOut();
+                    {# alert("success");#}
+                    form_status.html('<p class="text-success"><i class="fa fa-spinner fa-spin"></i>谢谢您联系我们，我们会尽可能在24小时内联系您。</p>').delay(4000).fadeOut();
                 }
                 if (data.status == "500") {
-                    {#                    alert("error");#}
-                    form_status.html('<p class="text-warning">出错了，请您留下您正确的联系方式。</p>').delay(4000).fadeOut();
+                    {# alert("error");#}
+                    form_status.html('<p class="text-warning"><i class="fa fa-spinner fa-spin"></i>出错了，请您留下您正确的联系方式。</p>').delay(4000).fadeOut();
                 }
             },
             error: function () {
-                {#                alert("留言发送失败！");#}
                 form_status.html('<p class="text-warning">出错了，请您留下您正确的联系方式。</p>').delay(4000).fadeOut();
             }
         });
@@ -308,7 +307,7 @@
 <script>
     (function(){
         var bp = document.createElement('script');
-        var curProtocol = window.location.protocol.split(':')[0];
+        var curProtocol = window.location.protocol.split(':')[0];d
         if (curProtocol === 'https') {
             bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
         }

@@ -3401,6 +3401,31 @@ p{
   -ms-border-radius: 50%;
   border-radius: 50%;
 }
+
+.feature-center .icon1  {
+  width: 90px;
+  height: 90px;
+  background: #f7f7f7;
+  /*background: rgba(0, 0, 0, 0.04) none repeat scroll 0 0;*/
+  display: table;
+  text-align: center;
+  margin: 0 auto 30px auto;
+  transition: all 0.3s ease 0s;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  border-radius: 50%;
+}
+
+.feature-center .icon1 .number {
+  display: table-cell;
+  vertical-align: middle;
+  /*height: 60px;*/
+  font-size: 40px;
+  /*line-height: 40px;*/
+  color: #52d3aa;
+}
+
 .feature-center .icon i {
   display: table-cell;
   vertical-align: middle;
