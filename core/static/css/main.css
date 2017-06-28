@@ -611,6 +611,21 @@ ul.sub-menu {
   bottom: -30px;
 }
 
+
+#home-slider .slider-car{
+  position: absolute;
+  right: 110px;
+  bottom: 0px;
+  z-index: 1;
+
+}
+
+#home-slider .slider-sign{
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+  z-index: 99;
+}
 /*.animate-in .slider-house {*/
 /*-webkit-animation: bounceInDown 500ms ease-in-out 800ms both;*/
 /*animation: bounceInDown 500ms ease-in-out 800ms both;*/
@@ -3390,7 +3405,7 @@ p{
 .feature-center .icon {
   width: 90px;
   height: 90px;
-  background: #efefef;
+  background: #f7f7f7;
   /*background: rgba(0, 0, 0, 0.04) none repeat scroll 0 0;*/
   display: table;
   text-align: center;
