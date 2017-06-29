@@ -562,8 +562,21 @@ ul.sub-menu {
   top: 50px;
   left: 0;
   width: 450px;
+  z-index:9999;
 }
 
+#home-slider .slider-ship{
+  position: absolute;
+  bottom: 150px;
+  left: 400px;
+  z-index:1;
+}
+#home-slider .slider-plane{
+  position: absolute;
+  top: 50px;
+  right: 0;
+  z-index:1;
+}
 #home-slider .slider-summary{
   position: absolute;
   top: 0px;
@@ -626,6 +639,60 @@ ul.sub-menu {
   bottom: 0px;
   z-index: 99;
 }
+
+#home-slider .slider-train{
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+  z-index: 1;
+}
+
+#home-slider .slider-monkey{
+  position: absolute;
+  right: 0px;
+  top: 100px;
+  z-index: 2;
+}
+#home-slider .slider-bear{
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  z-index: 2;
+}
+
+#home-slider .slider-rabbit{
+  position: absolute;
+  left: 200px;
+  bottom: 0px;
+  z-index: 3;
+}
+
+#home-slider .slider-joker{
+  position: absolute;
+  left: 300px;
+  bottom: 0px;
+  z-index: 4;
+}
+
+#home-slider .slider-human{
+  position: absolute;
+  right: 200px;
+  bottom: 0px;
+  z-index: 5;
+}
+#home-slider .slider-right{
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+  z-index: 4;
+}
+#home-slider .slider-left{
+  position: absolute;
+  left: 200px;
+  bottom: 0px;
+  z-index: 4;
+}
+
 /*.animate-in .slider-house {*/
 /*-webkit-animation: bounceInDown 500ms ease-in-out 800ms both;*/
 /*animation: bounceInDown 500ms ease-in-out 800ms both;*/
