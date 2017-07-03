@@ -108,6 +108,11 @@
     /*bottom: -20px;*/
   }
 
+  #home-slider .slider-c {
+    bottom:0;
+    right: 0;
+  }
+
   #home-slider .slider-sun1 {
     right: 170px;
     bottom: 210px;
@@ -125,6 +130,7 @@
     bottom: 65px;
     width: 60px
   }
+
 
   #home-slider .slider-birds1 {
     right: 320px;
@@ -358,6 +364,10 @@
     margin-right: -125px;
   }
 
+  #home-slider .slider-c {
+    width:100%;
+    height:auto;
+  }
   #home-slider .slider-sun {
     right: 50%;
     margin-right: 60px;

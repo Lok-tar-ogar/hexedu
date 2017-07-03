@@ -577,6 +577,12 @@ ul.sub-menu {
   right: 0;
   z-index:1;
 }
+#home-slider .slider-c{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
 #home-slider .slider-summary{
   position: absolute;
   top: 0px;
