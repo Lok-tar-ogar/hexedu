@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta charset="utf-8" />
+    <title>恒心前途用户中心登录页面</title>
+
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500">
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/static/css/form-elements.css">
+    <link rel="stylesheet" href="/static/css/loginstyle.css">
+</head>
+
+<body class="login-layout light-login ">
+<div class="top-content">
+
+    <div class="inner-bg">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-8 col-sm-offset-2 text">
+                    <h1><img src="/static/images/web/logo.png" style="width: 50px;height: 50px; margin-right: 20px;" /><strong>恒心前途</strong> </h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6 col-sm-offset-3 form-box">
+                    <div class="form-top">
+                        <div class="form-top-left">
+                            <h3>恒心前途用户中心</h3>
+                        </div>
+                        <div class="form-top-right">
+                            <i class="fa fa-key"></i>
+                        </div>
+                    </div>
+                    <div class="form-bottom">
+                        <form role="form" action="" method="post" class="login-form">
+                            {% csrf_token %}
+                            <div class="form-group">
+                                <label class="sr-only" for="form-username">用户名</label>
+                                <input type="text" name="form-username" placeholder="Username..." class="form-username form-control" id="ipt_username">
+                            </div>
+                            <div class="form-group">
+                                <label class="sr-only" for="form-password">密码</label>
+                                <input type="password" name="form-password" placeholder="Password..." class="form-password form-control" id="ipt_pwd">
+                            </div>
+                            <button type="button" id="btn_login" class="btn">登录</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!-- basic scripts -->
+
+<script src="/static/js/jquery-2.1.4.min.js"></script>
+<script src="/static/js/jquery.gritter.min.js"></script>
+<script src="/static/js/nprogress.js"></script>
+<script src="/static/js/jquery.backstretch.min.js"></script>
+<!-- inline scripts related to this page -->
+<script type="text/javascript">
+
+
+
+    //you don't need this, just used for changing background
+    jQuery(function($) {
+        function getCookie(name) {
+            var cookieValue = null;
+            if (document.cookie && document.cookie !== '') {
+                var cookies = document.cookie.split(';');
+                for (var i = 0; i < cookies.length; i++) {
+                    var cookie = jQuery.trim(cookies[i]);
+                    // Does this cookie string begin with the name we want?
+                    if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                        cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                        break;
+                    }
+                }
+            }
+            return cookieValue;
+        }
+        var csrftoken = getCookie('csrftoken');
+        $('#btn_login').on('click', function(e) {
+            $(this).find('input[type="text"], input[type="password"], textarea').each(function(){
+                if( $(this).val() == "" ) {
+                    e.preventDefault();
+                    $(this).addClass('input-error');
+                }
+                else {
+                    $(this).removeClass('input-error');
+                }
+            });
+            NProgress.start();
+            var username=$('#ipt_username').val();
+            var pwd=$('#ipt_pwd').val();
+            {#                var img=$('#ipt_img').val();#}
+            {#                 'img-verification':img,#}
+            $.post("/u/login",{'username':username,'pwd':pwd,'csrfmiddlewaretoken':csrftoken},
+                function (data){
+                    data=JSON.parse(data);
+                    if (data.status == "200") {
+                        $.gritter.add({
+                            // (string | mandatory) the heading of the notification
+                            title: '成功',
+                            // (string | mandatory) the text inside the notification
+                            text: data.msg,
+                            class_name: 'gritter-success'
+                        });
+                        location.href='/u/index';
+                    }
+                    else {
+                        $.gritter.add({
+                            // (string | mandatory) the heading of the notification
+                            title: '失败',
+                            // (string | mandatory) the text inside the notification
+                            text:data.status+'|'+ data.msg,
+                            class_name: 'gritter-warning'
+                        });
+                    }
+                    NProgress.done();
+                });
+
+            e.preventDefault();
+        });
+
+        $.backstretch("/static/images/loginback.jpg");
+
+        $('.login-form input[type="text"], .login-form input[type="password"], .login-form textarea').on('focus', function() {
+            $(this).removeClass('input-error');
+        });
+
+    });
+</script>
+</body>
+</html>
