@@ -27,10 +27,9 @@
             var bIsAndroid = sUserAgent.match(/android/i) == "android";
             var bIsCE = sUserAgent.match(/windows ce/i) == "windows ce";
             var bIsWM = sUserAgent.match(/windows mobile/i) == "windows mobile";
-            if ( bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE || bIsWM) {
-//移动端地址
-                if(top.location.hostname != "m.hexedu.com") {
-                    window.location.href = "http://m.hexedu.com";
+            if ( bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE || bIsWM) { //移动端地址
+                if(top.location.hostname != "www.hexedu.com") {
+                    window.location.href = "http://www.hexedu.com";
                 }
             }
         }
