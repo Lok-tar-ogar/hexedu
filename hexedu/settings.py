@@ -80,7 +80,9 @@ DATABASES = {
         'NAME': 'hexedu',
         'USER': 'root',
         'PASSWORD': 'hexedu666',
+        # 'PASSWORD': 'dawson',
         'HOST': '47.92.136.222',
+        # 'HOST': '127.0.0.1',
         'PORT': '3306',
     }
 }

@@ -35,15 +35,15 @@
         }
         {#browserRedirect();#}
     </script>
-    <script>
-        var _hmt = _hmt || [];
-        (function() {
-            var hm = document.createElement("script");
-            hm.src = "https://hm.baidu.com/hm.js?0e8c5bc1f347a934cd79d6cb67187a08";
-            var s = document.getElementsByTagName("script")[0];
-            s.parentNode.insertBefore(hm, s);
-        })();
-    </script>
+{#    <script>#}
+{#        var _hmt = _hmt || [];#}
+{#        (function() {#}
+{#            var hm = document.createElement("script");#}
+{#            hm.src = "https://hm.baidu.com/hm.js?0e8c5bc1f347a934cd79d6cb67187a08";#}
+{#            var s = document.getElementsByTagName("script")[0];#}
+{#            s.parentNode.insertBefore(hm, s);#}
+{#        })();#}
+{#    </script>#}
     {% block head %}
 
     {% endblock %}
@@ -64,7 +64,7 @@
                 <ul class="nav nav-pills">
                     <li>
                         <i class="fa fa-phone" style="margin-right: 10px;color:rgb(192, 48, 53);"></i>
-                        <strong style="color:rgb(192, 48, 53);">(86)028-6263-9653</strong>
+                        <strong style="color:rgb(192, 48, 53);">(86)028-8525-5405</strong>
                     </li>
                     {#                    <li><a href=""><i class="fa fa-weixin"></i></a></li>#}
                     <li><a href="http://weibo.com/6215956363/profile?topnav=1&wvr=6&is_all=1"><i class="fa fa-weibo"></i></a></li>
@@ -184,7 +184,7 @@
                     <h2>相关信息</h2>
                     <div class="media">
                         <div class="pull-left">
-                            <a href="#"><img src="/static/images/index/wechat1.jpg" alt="" style="width: 90px;height: 90px;"></a>
+                            <a href="#"><img src="/static/images/weixin.png" alt="" style="width: 90px;height: 90px;"></a>
                         </div>
                         <div class="media-body">
                             <blockquote> <p class="normal" style="margin-right: 10px;">We are unique, 我们只是比别人多了一点恒心。
@@ -210,9 +210,11 @@
                 <div class="contact-info bottom">
                     <h2>联系我们</h2>
                     <address>
-                        E-mail: <a href="mailto:info@hexedu.com">info@hexedu.com</a> <br>
-                        Phone: (86)028-6263-9653 <br>
-                        Fax: (86)028-6263-9653 <br>
+                        E-mail: <a href="mailto:info@hexedu.com">Howell@hexedu.net</a> <br>
+                        Phone: (86)028-8525-5405 <br>
+                        微博ID: 恒心前途教育咨询<br>
+                        QQ: 372870641<br>
+                        Fax: (86)028-8525-5405 <br>
 
                         {#                        address: 四川省成都市高新区天府大道中段666号希顿国际广场C座1203室#}
                     </address>
@@ -220,8 +222,8 @@
                     <h2>地址</h2>
                     <address>
                         <p class="normal-p">四川省 成都市 高新区 </p>
-                        <p class="normal-p">天府大道中段666号</p>
-                        <p class="normal-p">希顿国际广场C座1203室</p>
+                        <p class="normal-p">天府大道北段1700号</p>
+                        <p class="normal-p">环球中心W1区-730室</p>
                         {#                        United Kingdom <br>#}
                     </address>
                     <address>
@@ -253,7 +255,7 @@
                         </div>
                     </form>
                     <p class="normal-p">我们会尽可能在24小时内联系您</p>
-                    <p class="normal-p"><strong>无需等待，可直接致电 (86)028-6263-9653</strong></p>
+                    <p class="normal-p"><strong>无需等待，可直接致电 （86）028-8525-5405</strong></p>
                 </div>
             </div>
             <div class="col-sm-12">
@@ -303,30 +305,30 @@
     }
 </script>
 
-<script>
-    (function(){
-        var bp = document.createElement('script');
-        var curProtocol = window.location.protocol.split(':')[0];d
-        if (curProtocol === 'https') {
-            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
-        }
-        else {
-            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
-        }
-        var s = document.getElementsByTagName("script")[0];
-        s.parentNode.insertBefore(bp, s);
-    })();
-</script>
+{#<script>#}
+{#    (function(){#}
+{#        var bp = document.createElement('script');#}
+{#        var curProtocol = window.location.protocol.split(':')[0];d#}
+{#        if (curProtocol === 'https') {#}
+{#            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';#}
+{#        }#}
+{#        else {#}
+{#            bp.src = 'http://push.zhanzhang.baidu.com/push.js';#}
+{#        }#}
+{#        var s = document.getElementsByTagName("script")[0];#}
+{#        s.parentNode.insertBefore(bp, s);#}
+{#    })();#}
+{#</script>#}
 <div class="pcinfo">
     <span class="icon">
         <i class="fa fa-phone"></i>
     </span>
-    <strong >(86)028-6263-9653</strong>
+    <strong >(86)028-8525-5405</strong>
     <br>
     <span class="icon">
         <i class="fa fa-weixin"></i>
     </span>
-    <img src="/static/images/index/wechat1.jpg" alt="" style="width: 90px;height: 90px;">
+    <img src="/static/images/weixin.png" alt="" style="width: 90px;height: 90px;">
 </div>
 
 
@@ -341,6 +343,6 @@
 <script type="text/javascript" src="/static/js/main.js"></script>
 {% block footer %}
 {% endblock %}
-<script type="text/javascript"> var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://"); document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F0e8c5bc1f347a934cd79d6cb67187a08' type='text/javascript'%3E%3C/script%3E")) </script>
+{#<script type="text/javascript"> var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://"); document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F0e8c5bc1f347a934cd79d6cb67187a08' type='text/javascript'%3E%3C/script%3E")) </script>#}
 </body>
 </html>
